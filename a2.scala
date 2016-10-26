@@ -29,9 +29,12 @@ object Assign2 {
         val output = new BufferedWriter(new FileWriter(ofile))
 
         //val cmat = new CoordinateMatrix(sc.parallelize(Source.fromFile(datafile).getLines().map(line => line.split(",")).toList.map(x => MatrixEntry(x(0).toLong,x(1).toLong,x(2).toDouble))))
+        println("findmeee start code")
         val dat = sc.textFile(datafile)
         dat.cache()
+        println("findmeee convert to coordinate matrix")
         val cmat = new CoordinateMatrix(dat.map(line => line.split(",")).map(x => MatrixEntry(x(0).toLong,x(1).toLong,x(2).toDouble)))
+        println("findmeee convert to indexed row matrix")
         val rmat = cmat.toIndexedRowMatrix()
         //val mat = cmat.toRowMatrix()
 
@@ -50,6 +53,8 @@ object Assign2 {
         //newmat.cache()
 
         while(iter < numIterations){
+
+            println("findmeee":+iter)
             svd = newmat.computeSVD(20, computeU = true)
             U = svd.U
             s = svd.s
@@ -60,7 +65,9 @@ object Assign2 {
         }
 
         //val outmat = newmat.rows.collect
+        println("findmeee collecting rows")
         val newmatrows = newmat.rows.collect
+
         
 
         //outmat(x(0).toInt)(x(1).toInt)
