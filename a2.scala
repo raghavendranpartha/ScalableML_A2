@@ -60,7 +60,7 @@ object Assign2 {
         rmat = cmat.toIndexedRowMatrix()
 
         var iter = 0
-        val numIterations = 5       
+        val numIterations = 10       
               
 
         while(iter < numIterations){
