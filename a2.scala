@@ -35,11 +35,12 @@ object Assign2 {
         println("findmeee start code")
         //val dat = sc.textFile(datafile).map(line => line.split(",")).map(x => MatrixEntry(x(0).toLong,x(1).toLong,x(2).toDouble))                
         val dat = sc.textFile(datafile).map(line => line.split(",")).map(x => (x(0).toInt,x(1).toInt,x(2).toDouble))
+        dat.cache()
         println("findmeee convert to coordinate matrix")
         var cmat = new CoordinateMatrix(dat.map(x => MatrixEntry(x._1,x._2,x._3)))                    
         println("findmeee convert to indexed row matrix")
         var rmat = cmat.toIndexedRowMatrix()
-        rmat.rows.cache()
+        //rmat.rows.cache()
 
         
         var svd: SingularValueDecomposition[IndexedRowMatrix, Matrix] = rmat.computeSVD(20, computeU = true)
@@ -47,7 +48,7 @@ object Assign2 {
         var smat: Matrix = Matrices.diag(svd.s)
         var V: Matrix = svd.V
 
-        rmat.rows.unpersist()
+        dat.unpersist()
         
         var newmat = U.multiply(smat).multiply(V.transpose) 
         //newmat.rows.cache()
@@ -55,6 +56,7 @@ object Assign2 {
 
         var missingdat = missinginds.map(x => (x._1,x._2,newmatrows.filter(r => r.index == x._1)(0).vector(x._2)))
         var reconstructeddat = dat.union(missingdat)        
+        reconstructeddat.cache()
 
         cmat = new CoordinateMatrix(reconstructeddat.map(x => MatrixEntry(x._1,x._2,x._3)))
         rmat = cmat.toIndexedRowMatrix()
@@ -69,18 +71,18 @@ object Assign2 {
             U = svd.U
             smat = Matrices.diag(svd.s)
             V = svd.V             
-            rmat.rows.unpersist()
+            reconstructeddat.unpersist()
             newmat = U.multiply(smat).multiply(V.transpose)    
             newmatrows = newmat.rows.collect     
             missingdat = missinginds.map(x => (x._1,x._2,newmatrows.filter(r => r.index == x._1)(0).vector(x._2)))            
             reconstructeddat = dat.union(missingdat)                   
+            reconstructeddat.cache()  
             cmat = new CoordinateMatrix(reconstructeddat.map(x => MatrixEntry(x._1,x._2,x._3)))
-            rmat = cmat.toIndexedRowMatrix()
-            rmat.rows.cache()            
+            rmat = cmat.toIndexedRowMatrix()                      
             iter+=1  
         }
 
-                    
+        reconstructeddat.unpersist()            
         missingdat.collect.map(x => output.write(x._1+","+x._2+","+x._3+"\n"))        
         
         //sc.textFile(missingfile).map(line => line.split(",")).collect.map(x => output.write(x(0)+","+x(1)+","+newmatrows.filter(r => r.index == x(0).toInt)(0).vector(x(1).toInt)+"\n"))
