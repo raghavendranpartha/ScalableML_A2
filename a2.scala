@@ -29,73 +29,65 @@ object Assign2 {
         val ofile = new File(outfile)
         val output = new BufferedWriter(new FileWriter(ofile))
 
+        val missinginds = sc.textFile(missingfile).map(line => line.split(",")).map(x => (x(0).toInt,x(1).toInt))
+
         //val cmat = new CoordinateMatrix(sc.parallelize(Source.fromFile(datafile).getLines().map(line => line.split(",")).toList.map(x => MatrixEntry(x(0).toLong,x(1).toLong,x(2).toDouble))))
         println("findmeee start code")
-        val dat = sc.textFile(datafile)
-        //dat.cache()
+        //val dat = sc.textFile(datafile).map(line => line.split(",")).map(x => MatrixEntry(x(0).toLong,x(1).toLong,x(2).toDouble))                
+        val dat = sc.textFile(datafile).map(line => line.split(",")).map(x => (x(0).toInt,x(1).toInt,x(2).toDouble))
         println("findmeee convert to coordinate matrix")
-        val cmat = new CoordinateMatrix(dat.map(line => line.split(",")).map(x => MatrixEntry(x(0).toLong,x(1).toLong,x(2).toDouble)))
+        var cmat = new CoordinateMatrix(dat.map(x => MatrixEntry(x._1,x._2,x._3)))                    
         println("findmeee convert to indexed row matrix")
-        val rmat = cmat.toIndexedRowMatrix()
+        var rmat = cmat.toIndexedRowMatrix()
         rmat.rows.cache()
-        //val mat = cmat.toRowMatrix()
 
-
+        
         var svd: SingularValueDecomposition[IndexedRowMatrix, Matrix] = rmat.computeSVD(20, computeU = true)
         var U: IndexedRowMatrix = svd.U
-        var s: Vector = svd.s
+        var smat: Matrix = Matrices.diag(svd.s)
         var V: Matrix = svd.V
 
-        //dat.unpersist()
+        rmat.rows.unpersist()
+        
+        var newmat = U.multiply(smat).multiply(V.transpose) 
+        //newmat.rows.cache()
+        var newmatrows = newmat.rows.collect     
+
+        var missingdat = missinginds.map(x => (x._1,x._2,newmatrows.filter(r => r.index == x._1)(0).vector(x._2)))
+        var reconstructeddat = dat.union(missingdat)        
+
+        cmat = new CoordinateMatrix(reconstructeddat.map(x => MatrixEntry(x._1,x._2,x._3)))
+        rmat = cmat.toIndexedRowMatrix()
 
         var iter = 0
-        val numIterations = 5
-        var smat: Matrix = Matrices.diag(s)
-        var newmat = U.multiply(smat).multiply(V.transpose)      
-        var newmatrowsrdd = newmat.rows
-        newmatrowsrdd.cache()
-        var newmatrecon = new IndexedRowMatrix(newmatrowsrdd)
-        //newmat.cache()
+        val numIterations = 5       
+              
 
         while(iter < numIterations){
-
             println("findmeee"+iter)
-            svd = newmatrecon.computeSVD(20, computeU = true)
+            svd = rmat.computeSVD(20, computeU = true)
             U = svd.U
-            s = svd.s
-            V = svd.V 
-            smat = Matrices.diag(s)
-            newmatrowsrdd.unpersist()
+            smat = Matrices.diag(svd.s)
+            V = svd.V             
+            rmat.rows.unpersist()
             newmat = U.multiply(smat).multiply(V.transpose)    
-            newmatrowsrdd = newmat.rows
-            newmatrowsrdd.cache()
-            newmatrecon = new IndexedRowMatrix(newmatrowsrdd)
+            newmatrows = newmat.rows.collect     
+            missingdat = missinginds.map(x => (x._1,x._2,newmatrows.filter(r => r.index == x._1)(0).vector(x._2)))            
+            reconstructeddat = dat.union(missingdat)                   
+            cmat = new CoordinateMatrix(reconstructeddat.map(x => MatrixEntry(x._1,x._2,x._3)))
+            rmat = cmat.toIndexedRowMatrix()
+            rmat.rows.cache()            
             iter+=1  
         }
 
-        //val outmat = newmat.rows.collect
-        println("findmeee collecting rows")
-        val newmatrows = newmatrowsrdd.collect
-        newmatrowsrdd.unpersist()
+                    
+        missingdat.collect.map(x => output.write(x._1+","+x._2+","+x._3+"\n"))        
+        
+        //sc.textFile(missingfile).map(line => line.split(",")).collect.map(x => output.write(x(0)+","+x(1)+","+newmatrows.filter(r => r.index == x(0).toInt)(0).vector(x(1).toInt)+"\n"))
+        
+        output.close()
 
         
-
-        //outmat(x(0).toInt)(x(1).toInt)
-        //newmat.rows.filter(r => r.index == x(0)).collect
-
-        //Source.fromFile(missingfile).getLines.map(line => line.split(",")).toList.map(x => output.write(x(0)+","+x(1)+","+outmat(x(0).toInt)(x(1).toInt)+"\n"))
-        //Source.fromFile(missingfile).getLines.map(line => line.split(",")).toList.map(x => output.write(x(0)+","+x(1)+","+newmatrows.filter(r => r.index == x(0).toInt)(0).vector(x(1).toInt)+"\n"))
-        sc.textFile(missingfile).map(line => line.split(",")).collect.map(x => output.write(x(0)+","+x(1)+","+newmatrows.filter(r => r.index == x(0).toInt)(0).vector(x(1).toInt)+"\n"))
-        //newmat.unpersist()
-        output.close()
-
-        /*
-        for (line <- Source.fromFile(missingfile).getLines.map(line => line.split(",")).toList.map(x => (x(0),x(1),outmat(x(0).toInt)(x(1).toInt)))){
-            println(line._1)
-            output.write(line._1+","+line._2+","+line._3+"\n")
-        }
-        output.close()
-        */  
         
         System.exit(0) 
     }
