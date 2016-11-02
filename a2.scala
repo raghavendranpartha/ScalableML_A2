@@ -29,7 +29,8 @@ object Assign2 {
         
         val datafile = "medium.csv"
         val missingfile = "medium_missing.csv"
-        
+        val outfile = "medium_out.csv"
+
         val datafile = "small.csv"
         val missingfile = "small_missing.csv"
         val outfile = "small_out.csv"
@@ -37,8 +38,10 @@ object Assign2 {
         val ofile = new File(outfile)
         val output = new BufferedWriter(new FileWriter(ofile))
 
-        val missinginds = sc.textFile(missingfile).map(line => line.split(",")).map(x => (x(0).toInt,x(1).toInt))
-        val missingindscoll = missinginds.collect
+        //val missinginds = sc.textFile(missingfile).map(line => line.split(",")).map(x => (x(0).toLong,x(1).toLong))
+        val missingindsdummy = sc.textFile(missingfile).map(line => line.split(",")).map(x => (x(0).toLong,x(1).toLong) -> 0.0)
+        missingindsdummy.cache()
+        //val missingindscoll = missinginds.collect
 
         //val cmat = new CoordinateMatrix(sc.parallelize(Source.fromFile(datafile).getLines().map(line => line.split(",")).toList.map(x => MatrixEntry(x(0).toLong,x(1).toLong,x(2).toDouble))))
 
@@ -68,11 +71,19 @@ object Assign2 {
         println("findmeee svd run 1 end")
         println(Calendar.getInstance.getTime())
 
+        rmat.rows.unpersist()
+
         //dat.unpersist()
 
         println(Calendar.getInstance.getTime())        
         var newmat = U.multiply(smat).multiply(V.transpose) 
-        var newmatc = newmat.toCoordinateMatrix.entries.map(r => (r.i,r.j) -> r.value).filter(r => missingindscoll.contains(r._1))
+        //var newmatc = newmat.toCoordinateMatrix.entries.cache()
+        var newmatcRow = newmat.toCoordinateMatrix.entries.cache().map(r => (r.i,r.j) -> r.value)        
+        var newmatcRowMiss = newmatcRow.join(missingindsdummy)
+
+        
+
+
 
         //newmat.rows.cache()
         //var newmatrows = newmat.rows.collect     
@@ -112,11 +123,14 @@ object Assign2 {
         reconstructeddat.unpersist()            
         */
         //missingdat.collect.map(x => output.write(x._1+","+x._2+","+x._3+"\n"))        
-        newmatc.collect.map(x => output.write(x._1._1+","+x._1._2+","+x._2+"\n"))
+        newmatcRowMiss.collect.map(x => output.write(x._1._1+","+x._1._2+","+x._2._1+"\n"))
+        output.close()  
+        missingindsdummy.unpersist()
+        newmatcRowMiss.unpersist()
         
         //sc.textFile(missingfile).map(line => line.split(",")).collect.map(x => output.write(x(0)+","+x(1)+","+newmatrows.filter(r => r.index == x(0).toInt)(0).vector(x(1).toInt)+"\n"))
         
-        output.close()       
+             
         System.exit(0) 
     }
 }
