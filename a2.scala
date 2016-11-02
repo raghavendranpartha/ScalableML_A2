@@ -23,7 +23,7 @@ object Assign2 {
         val missingfile = args(1)
         val outfile = args(2)
         
-
+        /*
         val datafile = "large.csv"
         val missingfile = "large_missing.csv"
         
@@ -38,6 +38,7 @@ object Assign2 {
         val output = new BufferedWriter(new FileWriter(ofile))
 
         val missinginds = sc.textFile(missingfile).map(line => line.split(",")).map(x => (x(0).toInt,x(1).toInt))
+        val missingindscoll = missinginds.collect
 
         //val cmat = new CoordinateMatrix(sc.parallelize(Source.fromFile(datafile).getLines().map(line => line.split(",")).toList.map(x => MatrixEntry(x(0).toLong,x(1).toLong,x(2).toDouble))))
 
@@ -71,10 +72,14 @@ object Assign2 {
 
         println(Calendar.getInstance.getTime())        
         var newmat = U.multiply(smat).multiply(V.transpose) 
-        //newmat.rows.cache()
-        var newmatrows = newmat.rows.collect     
+        var newmatc = newmat.toCoordinateMatrix.entries.map(r => (r.i,r.j) -> r.value).filter(r => missingindscoll.contains(r._1))
 
-        var missingdat = missinginds.map(x => (x._1,x._2,newmatrows.filter(r => r.index == x._1)(0).vector(x._2)))
+        //newmat.rows.cache()
+        //var newmatrows = newmat.rows.collect     
+        //println("collected reconstructed matrix")
+
+        //var missingdat = missinginds.map(x => (x._1,x._2,newmatrows.filter(r => r.index == x._1)(0).vector(x._2)))
+        /*
         var reconstructeddat = dat.union(missingdat)        
         reconstructeddat.cache()
         println(Calendar.getInstance.getTime())
@@ -105,14 +110,13 @@ object Assign2 {
         }
 
         reconstructeddat.unpersist()            
-        missingdat.collect.map(x => output.write(x._1+","+x._2+","+x._3+"\n"))        
+        */
+        //missingdat.collect.map(x => output.write(x._1+","+x._2+","+x._3+"\n"))        
+        newmatc.collect.map(x => output.write(x._1._1+","+x._1._2+","+x._2+"\n"))
         
         //sc.textFile(missingfile).map(line => line.split(",")).collect.map(x => output.write(x(0)+","+x(1)+","+newmatrows.filter(r => r.index == x(0).toInt)(0).vector(x(1).toInt)+"\n"))
         
-        output.close()
-
-        
-        
+        output.close()       
         System.exit(0) 
     }
 }
