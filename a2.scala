@@ -11,6 +11,7 @@ import org.apache.spark.mllib.linalg.Matrix
 import org.apache.spark.mllib.linalg.distributed.RowMatrix
 import org.apache.spark.mllib.linalg.distributed.IndexedRowMatrix
 import org.apache.spark.mllib.linalg.SingularValueDecomposition
+import java.util.Calendar
  
 object Assign2 {    
 
@@ -21,7 +22,14 @@ object Assign2 {
         val datafile = args(0)
         val missingfile = args(1)
         val outfile = args(2)
-        /*
+        
+
+        val datafile = "large.csv"
+        val missingfile = "large_missing.csv"
+        
+        val datafile = "medium.csv"
+        val missingfile = "medium_missing.csv"
+        
         val datafile = "small.csv"
         val missingfile = "small_missing.csv"
         val outfile = "small_out.csv"
@@ -32,24 +40,36 @@ object Assign2 {
         val missinginds = sc.textFile(missingfile).map(line => line.split(",")).map(x => (x(0).toInt,x(1).toInt))
 
         //val cmat = new CoordinateMatrix(sc.parallelize(Source.fromFile(datafile).getLines().map(line => line.split(",")).toList.map(x => MatrixEntry(x(0).toLong,x(1).toLong,x(2).toDouble))))
+
         println("findmeee start code")
+        println("filename "+datafile)
         //val dat = sc.textFile(datafile).map(line => line.split(",")).map(x => MatrixEntry(x(0).toLong,x(1).toLong,x(2).toDouble))                
         val dat = sc.textFile(datafile).map(line => line.split(",")).map(x => (x(0).toInt,x(1).toInt,x(2).toDouble))
-        dat.cache()
-        println("findmeee convert to coordinate matrix")
-        var cmat = new CoordinateMatrix(dat.map(x => MatrixEntry(x._1,x._2,x._3)))                    
-        println("findmeee convert to indexed row matrix")
-        var rmat = cmat.toIndexedRowMatrix()
-        //rmat.rows.cache()
-
+        //dat.cache()
         
+        println("findmeee convert to coordinate matrix")
+        println(Calendar.getInstance.getTime())
+        var cmat = new CoordinateMatrix(dat.map(x => MatrixEntry(x._1,x._2,x._3)))      
+        println(Calendar.getInstance.getTime())
+
+        println("findmeee convert to indexed row matrix")
+        println(Calendar.getInstance.getTime())
+        var rmat = cmat.toIndexedRowMatrix()
+        println(Calendar.getInstance.getTime())
+        rmat.rows.cache()
+
+        println("findmeee svd run 1 start")
+        println(Calendar.getInstance.getTime())
         var svd: SingularValueDecomposition[IndexedRowMatrix, Matrix] = rmat.computeSVD(20, computeU = true)
         var U: IndexedRowMatrix = svd.U
         var smat: Matrix = Matrices.diag(svd.s)
         var V: Matrix = svd.V
+        println("findmeee svd run 1 end")
+        println(Calendar.getInstance.getTime())
 
-        dat.unpersist()
-        
+        //dat.unpersist()
+
+        println(Calendar.getInstance.getTime())        
         var newmat = U.multiply(smat).multiply(V.transpose) 
         //newmat.rows.cache()
         var newmatrows = newmat.rows.collect     
@@ -57,6 +77,7 @@ object Assign2 {
         var missingdat = missinginds.map(x => (x._1,x._2,newmatrows.filter(r => r.index == x._1)(0).vector(x._2)))
         var reconstructeddat = dat.union(missingdat)        
         reconstructeddat.cache()
+        println(Calendar.getInstance.getTime())
 
         cmat = new CoordinateMatrix(reconstructeddat.map(x => MatrixEntry(x._1,x._2,x._3)))
         rmat = cmat.toIndexedRowMatrix()
@@ -67,6 +88,7 @@ object Assign2 {
 
         while(iter < numIterations){
             println("findmeee"+iter)
+            println(Calendar.getInstance.getTime())
             svd = rmat.computeSVD(20, computeU = true)
             U = svd.U
             smat = Matrices.diag(svd.s)
