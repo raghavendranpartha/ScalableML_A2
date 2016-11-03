@@ -12,6 +12,9 @@ import org.apache.spark.mllib.linalg.distributed.RowMatrix
 import org.apache.spark.mllib.linalg.distributed.IndexedRowMatrix
 import org.apache.spark.mllib.linalg.SingularValueDecomposition
 import java.util.Calendar
+import breeze.linalg._
+import breeze.numerics._
+
  
 object Assign2 {    
 
@@ -97,12 +100,55 @@ object Assign2 {
         println("findmeee"+Calendar.getInstance.getTime())
         rmat.rows.unpersist()    
 
-        //dat.unpersist()
-        println("findmeee Reconstruction start")
-        println("findmeee"+Calendar.getInstance.getTime())                
+        //dat.unpersist()        
         var newmat = U.multiply(smat).multiply(V.transpose) 
+
+        //var reconstructedmat = newmat.rows.map(r => r.index -> r.vector).join        
+
+        var iter = 0
+        //val numIterations = 10    
+        val numIterations = {
+            if(datafile == "hdfs://noc-n063.csb.pitt.edu:9000/large.csv"){                
+                3
+            } else if(datafile == "hdfs://noc-n063.csb.pitt.edu:9000/medium.csv"){
+                6
+            }else{
+                10
+            }
+        }   
+              
+
+        while(iter < numIterations){
+            println("findmeee"+iter)
+            println("findmeee"+Calendar.getInstance.getTime())
+
+            var recmatrows = newmat.rows.map(r => r.index -> r.vector).join(rmat.rows.map(x => x.index -> x.vector)).mapPartitions(iter => {
+                var res = collection.mutable.ArrayBuffer.empty[IndexedRow]
+                iter.foreach(entry => {
+                    var v1 = breeze.linalg.DenseVector(entry._2._1.toArray)
+                    var v2 = breeze.linalg.DenseVector(entry._2._2.toArray)                
+                    res += IndexedRow(entry._1, Vectors.dense((v1:*(-I(v2)):+v1+v2).toArray))
+                    })
+                res.iterator
+            }).cache()
+
+            var recmat = new IndexedRowMatrix(recmatrows)
+            svd = recmat.computeSVD(20, computeU = true)
+            U = svd.U
+            smat = Matrices.diag(svd.s)
+            V = svd.V             
+            recmatrows.unpersist()
+            newmat = U.multiply(smat).multiply(V.transpose)
+            iter+=1
+            
+        }
+
+
+
         //var newmatc = newmat.toCoordinateMatrix.entries.cache()
         //var newmatcRow = newmat.toCoordinateMatrix.entries.cache().map(r => (r.i,r.j) -> r.value)        
+        println("findmeee Final Missing start")
+        println("findmeee"+Calendar.getInstance.getTime())   
         var newmatcRow = newmat.toCoordinateMatrix.entries.mapPartitions(iter => {
             var res = collection.mutable.ArrayBuffer.empty[((Long,Long),Double)]
             //val missinginds = md2.value
@@ -113,7 +159,7 @@ object Assign2 {
         }).cache()
         //var newmatcRowMiss = missingindsdummy2.keyBy(r => r).join(newmatcRow)
         var newmatcRowMiss = missingindsdummy2.join(newmatcRow)
-        println("findmeee Reconstruction end")
+        println("findmeee Final Missing end")
         println("findmeee"+Calendar.getInstance.getTime())                
         //dat2.unpersist()
 
@@ -170,6 +216,6 @@ object Assign2 {
         //sc.textFile(missingfile).map(line => line.split(",")).collect.map(x => output.write(x(0)+","+x(1)+","+newmatrows.filter(r => r.index == x(0).toInt)(0).vector(x(1).toInt)+"\n"))
         
              
-        //System.exit(0) 
+        System.exit(0) 
     }
 }
