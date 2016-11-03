@@ -1,5 +1,5 @@
-Wed Nov 02 19:53:08 EDT 2016 Thread[main,5,main] Cleanup action starting
-java.sql.SQLException: Failed to start database 'metastore_db' with class loader org.apache.spark.sql.hive.client.IsolatedClientLoader$$anon$1@4f0f56f5, see the next exception for details.
+Thu Nov 03 10:23:59 EDT 2016 Thread[main,5,main] Cleanup action starting
+java.sql.SQLException: Failed to start database 'metastore_db' with class loader org.apache.spark.sql.hive.client.IsolatedClientLoader$$anon$1@33de9d85, see the next exception for details.
 	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.getSQLException(Unknown Source)
 	at org.apache.derby.impl.jdbc.Util.newEmbedSQLException(Unknown Source)
 	at org.apache.derby.impl.jdbc.Util.seeNextException(Unknown Source)
@@ -133,7 +133,7 @@ java.sql.SQLException: Failed to start database 'metastore_db' with class loader
 	at org.apache.spark.deploy.SparkSubmit$.submit(SparkSubmit.scala:206)
 	at org.apache.spark.deploy.SparkSubmit$.main(SparkSubmit.scala:121)
 	at org.apache.spark.deploy.SparkSubmit.main(SparkSubmit.scala)
-Caused by: java.sql.SQLException: Failed to start database 'metastore_db' with class loader org.apache.spark.sql.hive.client.IsolatedClientLoader$$anon$1@4f0f56f5, see the next exception for details.
+Caused by: java.sql.SQLException: Failed to start database 'metastore_db' with class loader org.apache.spark.sql.hive.client.IsolatedClientLoader$$anon$1@33de9d85, see the next exception for details.
 	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(Unknown Source)
 	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.wrapArgsForTransportAcrossDRDA(Unknown Source)
 	... 133 more
@@ -675,8 +675,8 @@ ERROR XSDB6: Another instance of Derby may have already booted the database /hom
 	at org.apache.spark.deploy.SparkSubmit.main(SparkSubmit.scala)
 ============= end nested exception, level (3) ===========
 Cleanup action completed
-Wed Nov 02 19:53:08 EDT 2016 Thread[main,5,main] Cleanup action starting
-java.sql.SQLException: Failed to start database 'metastore_db' with class loader org.apache.spark.sql.hive.client.IsolatedClientLoader$$anon$1@4f0f56f5, see the next exception for details.
+Thu Nov 03 10:23:59 EDT 2016 Thread[main,5,main] Cleanup action starting
+java.sql.SQLException: Failed to start database 'metastore_db' with class loader org.apache.spark.sql.hive.client.IsolatedClientLoader$$anon$1@33de9d85, see the next exception for details.
 	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.getSQLException(Unknown Source)
 	at org.apache.derby.impl.jdbc.Util.newEmbedSQLException(Unknown Source)
 	at org.apache.derby.impl.jdbc.Util.seeNextException(Unknown Source)
@@ -810,7 +810,7 @@ java.sql.SQLException: Failed to start database 'metastore_db' with class loader
 	at org.apache.spark.deploy.SparkSubmit$.submit(SparkSubmit.scala:206)
 	at org.apache.spark.deploy.SparkSubmit$.main(SparkSubmit.scala:121)
 	at org.apache.spark.deploy.SparkSubmit.main(SparkSubmit.scala)
-Caused by: java.sql.SQLException: Failed to start database 'metastore_db' with class loader org.apache.spark.sql.hive.client.IsolatedClientLoader$$anon$1@4f0f56f5, see the next exception for details.
+Caused by: java.sql.SQLException: Failed to start database 'metastore_db' with class loader org.apache.spark.sql.hive.client.IsolatedClientLoader$$anon$1@33de9d85, see the next exception for details.
 	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(Unknown Source)
 	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.wrapArgsForTransportAcrossDRDA(Unknown Source)
 	... 133 more
@@ -1352,8 +1352,8 @@ ERROR XSDB6: Another instance of Derby may have already booted the database /hom
 	at org.apache.spark.deploy.SparkSubmit.main(SparkSubmit.scala)
 ============= end nested exception, level (3) ===========
 Cleanup action completed
-Wed Nov 02 19:53:08 EDT 2016 Thread[main,5,main] Cleanup action starting
-java.sql.SQLException: Failed to start database 'metastore_db' with class loader org.apache.spark.sql.hive.client.IsolatedClientLoader$$anon$1@4f0f56f5, see the next exception for details.
+Thu Nov 03 10:24:00 EDT 2016 Thread[main,5,main] Cleanup action starting
+java.sql.SQLException: Failed to start database 'metastore_db' with class loader org.apache.spark.sql.hive.client.IsolatedClientLoader$$anon$1@33de9d85, see the next exception for details.
 	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.getSQLException(Unknown Source)
 	at org.apache.derby.impl.jdbc.Util.newEmbedSQLException(Unknown Source)
 	at org.apache.derby.impl.jdbc.Util.seeNextException(Unknown Source)
@@ -1487,7 +1487,7 @@ java.sql.SQLException: Failed to start database 'metastore_db' with class loader
 	at org.apache.spark.deploy.SparkSubmit$.submit(SparkSubmit.scala:206)
 	at org.apache.spark.deploy.SparkSubmit$.main(SparkSubmit.scala:121)
 	at org.apache.spark.deploy.SparkSubmit.main(SparkSubmit.scala)
-Caused by: java.sql.SQLException: Failed to start database 'metastore_db' with class loader org.apache.spark.sql.hive.client.IsolatedClientLoader$$anon$1@4f0f56f5, see the next exception for details.
+Caused by: java.sql.SQLException: Failed to start database 'metastore_db' with class loader org.apache.spark.sql.hive.client.IsolatedClientLoader$$anon$1@33de9d85, see the next exception for details.
 	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(Unknown Source)
 	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.wrapArgsForTransportAcrossDRDA(Unknown Source)
 	... 133 more
@@ -2029,8 +2029,8 @@ ERROR XSDB6: Another instance of Derby may have already booted the database /hom
 	at org.apache.spark.deploy.SparkSubmit.main(SparkSubmit.scala)
 ============= end nested exception, level (3) ===========
 Cleanup action completed
-Wed Nov 02 19:53:08 EDT 2016 Thread[main,5,main] Cleanup action starting
-java.sql.SQLException: Failed to start database 'metastore_db' with class loader org.apache.spark.sql.hive.client.IsolatedClientLoader$$anon$1@4f0f56f5, see the next exception for details.
+Thu Nov 03 10:24:00 EDT 2016 Thread[main,5,main] Cleanup action starting
+java.sql.SQLException: Failed to start database 'metastore_db' with class loader org.apache.spark.sql.hive.client.IsolatedClientLoader$$anon$1@33de9d85, see the next exception for details.
 	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.getSQLException(Unknown Source)
 	at org.apache.derby.impl.jdbc.Util.newEmbedSQLException(Unknown Source)
 	at org.apache.derby.impl.jdbc.Util.seeNextException(Unknown Source)
@@ -2164,7 +2164,7 @@ java.sql.SQLException: Failed to start database 'metastore_db' with class loader
 	at org.apache.spark.deploy.SparkSubmit$.submit(SparkSubmit.scala:206)
 	at org.apache.spark.deploy.SparkSubmit$.main(SparkSubmit.scala:121)
 	at org.apache.spark.deploy.SparkSubmit.main(SparkSubmit.scala)
-Caused by: java.sql.SQLException: Failed to start database 'metastore_db' with class loader org.apache.spark.sql.hive.client.IsolatedClientLoader$$anon$1@4f0f56f5, see the next exception for details.
+Caused by: java.sql.SQLException: Failed to start database 'metastore_db' with class loader org.apache.spark.sql.hive.client.IsolatedClientLoader$$anon$1@33de9d85, see the next exception for details.
 	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(Unknown Source)
 	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.wrapArgsForTransportAcrossDRDA(Unknown Source)
 	... 133 more
@@ -2706,8 +2706,8 @@ ERROR XSDB6: Another instance of Derby may have already booted the database /hom
 	at org.apache.spark.deploy.SparkSubmit.main(SparkSubmit.scala)
 ============= end nested exception, level (3) ===========
 Cleanup action completed
-Wed Nov 02 19:53:09 EDT 2016 Thread[main,5,main] Cleanup action starting
-java.sql.SQLException: Failed to start database 'metastore_db' with class loader org.apache.spark.sql.hive.client.IsolatedClientLoader$$anon$1@4f0f56f5, see the next exception for details.
+Thu Nov 03 10:24:00 EDT 2016 Thread[main,5,main] Cleanup action starting
+java.sql.SQLException: Failed to start database 'metastore_db' with class loader org.apache.spark.sql.hive.client.IsolatedClientLoader$$anon$1@33de9d85, see the next exception for details.
 	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.getSQLException(Unknown Source)
 	at org.apache.derby.impl.jdbc.Util.newEmbedSQLException(Unknown Source)
 	at org.apache.derby.impl.jdbc.Util.seeNextException(Unknown Source)
@@ -2838,7 +2838,7 @@ java.sql.SQLException: Failed to start database 'metastore_db' with class loader
 	at org.apache.spark.deploy.SparkSubmit$.submit(SparkSubmit.scala:206)
 	at org.apache.spark.deploy.SparkSubmit$.main(SparkSubmit.scala:121)
 	at org.apache.spark.deploy.SparkSubmit.main(SparkSubmit.scala)
-Caused by: java.sql.SQLException: Failed to start database 'metastore_db' with class loader org.apache.spark.sql.hive.client.IsolatedClientLoader$$anon$1@4f0f56f5, see the next exception for details.
+Caused by: java.sql.SQLException: Failed to start database 'metastore_db' with class loader org.apache.spark.sql.hive.client.IsolatedClientLoader$$anon$1@33de9d85, see the next exception for details.
 	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(Unknown Source)
 	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.wrapArgsForTransportAcrossDRDA(Unknown Source)
 	... 130 more
@@ -3371,8 +3371,8 @@ ERROR XSDB6: Another instance of Derby may have already booted the database /hom
 	at org.apache.spark.deploy.SparkSubmit.main(SparkSubmit.scala)
 ============= end nested exception, level (3) ===========
 Cleanup action completed
-Wed Nov 02 19:53:09 EDT 2016 Thread[main,5,main] Cleanup action starting
-java.sql.SQLException: Failed to start database 'metastore_db' with class loader org.apache.spark.sql.hive.client.IsolatedClientLoader$$anon$1@4f0f56f5, see the next exception for details.
+Thu Nov 03 10:24:00 EDT 2016 Thread[main,5,main] Cleanup action starting
+java.sql.SQLException: Failed to start database 'metastore_db' with class loader org.apache.spark.sql.hive.client.IsolatedClientLoader$$anon$1@33de9d85, see the next exception for details.
 	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.getSQLException(Unknown Source)
 	at org.apache.derby.impl.jdbc.Util.newEmbedSQLException(Unknown Source)
 	at org.apache.derby.impl.jdbc.Util.seeNextException(Unknown Source)
@@ -3503,7 +3503,7 @@ java.sql.SQLException: Failed to start database 'metastore_db' with class loader
 	at org.apache.spark.deploy.SparkSubmit$.submit(SparkSubmit.scala:206)
 	at org.apache.spark.deploy.SparkSubmit$.main(SparkSubmit.scala:121)
 	at org.apache.spark.deploy.SparkSubmit.main(SparkSubmit.scala)
-Caused by: java.sql.SQLException: Failed to start database 'metastore_db' with class loader org.apache.spark.sql.hive.client.IsolatedClientLoader$$anon$1@4f0f56f5, see the next exception for details.
+Caused by: java.sql.SQLException: Failed to start database 'metastore_db' with class loader org.apache.spark.sql.hive.client.IsolatedClientLoader$$anon$1@33de9d85, see the next exception for details.
 	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(Unknown Source)
 	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.wrapArgsForTransportAcrossDRDA(Unknown Source)
 	... 130 more
@@ -4036,8 +4036,8 @@ ERROR XSDB6: Another instance of Derby may have already booted the database /hom
 	at org.apache.spark.deploy.SparkSubmit.main(SparkSubmit.scala)
 ============= end nested exception, level (3) ===========
 Cleanup action completed
-Wed Nov 02 19:53:09 EDT 2016 Thread[main,5,main] Cleanup action starting
-java.sql.SQLException: Failed to start database 'metastore_db' with class loader org.apache.spark.sql.hive.client.IsolatedClientLoader$$anon$1@4f0f56f5, see the next exception for details.
+Thu Nov 03 10:24:00 EDT 2016 Thread[main,5,main] Cleanup action starting
+java.sql.SQLException: Failed to start database 'metastore_db' with class loader org.apache.spark.sql.hive.client.IsolatedClientLoader$$anon$1@33de9d85, see the next exception for details.
 	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.getSQLException(Unknown Source)
 	at org.apache.derby.impl.jdbc.Util.newEmbedSQLException(Unknown Source)
 	at org.apache.derby.impl.jdbc.Util.seeNextException(Unknown Source)
@@ -4168,7 +4168,7 @@ java.sql.SQLException: Failed to start database 'metastore_db' with class loader
 	at org.apache.spark.deploy.SparkSubmit$.submit(SparkSubmit.scala:206)
 	at org.apache.spark.deploy.SparkSubmit$.main(SparkSubmit.scala:121)
 	at org.apache.spark.deploy.SparkSubmit.main(SparkSubmit.scala)
-Caused by: java.sql.SQLException: Failed to start database 'metastore_db' with class loader org.apache.spark.sql.hive.client.IsolatedClientLoader$$anon$1@4f0f56f5, see the next exception for details.
+Caused by: java.sql.SQLException: Failed to start database 'metastore_db' with class loader org.apache.spark.sql.hive.client.IsolatedClientLoader$$anon$1@33de9d85, see the next exception for details.
 	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(Unknown Source)
 	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.wrapArgsForTransportAcrossDRDA(Unknown Source)
 	... 130 more
@@ -4701,8 +4701,8 @@ ERROR XSDB6: Another instance of Derby may have already booted the database /hom
 	at org.apache.spark.deploy.SparkSubmit.main(SparkSubmit.scala)
 ============= end nested exception, level (3) ===========
 Cleanup action completed
-Wed Nov 02 19:53:09 EDT 2016 Thread[main,5,main] Cleanup action starting
-java.sql.SQLException: Failed to start database 'metastore_db' with class loader org.apache.spark.sql.hive.client.IsolatedClientLoader$$anon$1@4f0f56f5, see the next exception for details.
+Thu Nov 03 10:24:00 EDT 2016 Thread[main,5,main] Cleanup action starting
+java.sql.SQLException: Failed to start database 'metastore_db' with class loader org.apache.spark.sql.hive.client.IsolatedClientLoader$$anon$1@33de9d85, see the next exception for details.
 	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.getSQLException(Unknown Source)
 	at org.apache.derby.impl.jdbc.Util.newEmbedSQLException(Unknown Source)
 	at org.apache.derby.impl.jdbc.Util.seeNextException(Unknown Source)
@@ -4833,7 +4833,7 @@ java.sql.SQLException: Failed to start database 'metastore_db' with class loader
 	at org.apache.spark.deploy.SparkSubmit$.submit(SparkSubmit.scala:206)
 	at org.apache.spark.deploy.SparkSubmit$.main(SparkSubmit.scala:121)
 	at org.apache.spark.deploy.SparkSubmit.main(SparkSubmit.scala)
-Caused by: java.sql.SQLException: Failed to start database 'metastore_db' with class loader org.apache.spark.sql.hive.client.IsolatedClientLoader$$anon$1@4f0f56f5, see the next exception for details.
+Caused by: java.sql.SQLException: Failed to start database 'metastore_db' with class loader org.apache.spark.sql.hive.client.IsolatedClientLoader$$anon$1@33de9d85, see the next exception for details.
 	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(Unknown Source)
 	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.wrapArgsForTransportAcrossDRDA(Unknown Source)
 	... 130 more
