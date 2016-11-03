@@ -49,8 +49,10 @@ object Assign2 {
                 res +=  (((tmp(0).toLong,tmp(1).toLong),0.0))
                 })
             res.iterator
-            })
-        missingindsdummy2.cache()
+            }).cache()
+
+        //val md2 = sc.broadcast(missingindsdummy2)
+        
         //val missingindscoll = missinginds.collect
 
         //val cmat = new CoordinateMatrix(sc.parallelize(Source.fromFile(datafile).getLines().map(line => line.split(",")).toList.map(x => MatrixEntry(x(0).toLong,x(1).toLong,x(2).toDouble))))
@@ -81,7 +83,7 @@ object Assign2 {
 
         println("findmeee convert to indexed row matrix")
         println(Calendar.getInstance.getTime())
-        var rmat = cmat.toIndexedRowMatrix()
+        var rmat = cmat.toIndexedRowMatrix()        
         println(Calendar.getInstance.getTime())
         rmat.rows.cache()
 
@@ -93,6 +95,7 @@ object Assign2 {
         var V: Matrix = svd.V
         println("findmeee svd run 1 end")
         println(Calendar.getInstance.getTime())
+        rmat.rows.unpersist()    
 
         //dat.unpersist()
 
@@ -102,14 +105,17 @@ object Assign2 {
         //var newmatcRow = newmat.toCoordinateMatrix.entries.cache().map(r => (r.i,r.j) -> r.value)        
         var newmatcRow = newmat.toCoordinateMatrix.entries.mapPartitions(iter => {
             var res = collection.mutable.ArrayBuffer.empty[((Long,Long),Double)]
+            //val missinginds = md2.value
             iter.foreach(r => {
                 res += (((r.i,r.j),r.value))
             })
             res.iterator
         }).cache()
-        var newmatcRowMiss = newmatcRow.join(missingindsdummy2)
+        //var newmatcRowMiss = missingindsdummy2.keyBy(r => r).join(newmatcRow)
+        var newmatcRowMiss = missingindsdummy2.join(newmatcRow)
+        //dat2.unpersist()
 
-        rmat.rows.unpersist()    
+        
 
         //newmat.rows.cache()
         //var newmatrows = newmat.rows.collect     
@@ -149,9 +155,9 @@ object Assign2 {
         reconstructeddat.unpersist()            
         */
         //missingdat.collect.map(x => output.write(x._1+","+x._2+","+x._3+"\n"))        
-        newmatcRowMiss.collect.foreach(x => output.write(x._1._1+","+x._1._2+","+x._2._1+"\n"))
+        newmatcRowMiss.collect.foreach(x => output.write(x._1._1+","+x._1._2+","+x._2._2+"\n"))
         output.close()  
-        missingindsdummy.unpersist()
+        missingindsdummy2.unpersist()
         newmatcRowMiss.unpersist()
         println("findmeee end code")
         //sc.textFile(missingfile).map(line => line.split(",")).collect.map(x => output.write(x(0)+","+x(1)+","+newmatrows.filter(r => r.index == x(0).toInt)(0).vector(x(1).toInt)+"\n"))
