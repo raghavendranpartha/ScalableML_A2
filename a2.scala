@@ -155,6 +155,7 @@ object Assign2 {
         reconstructeddat.unpersist()            
         */
         //missingdat.collect.map(x => output.write(x._1+","+x._2+","+x._3+"\n"))        
+        println("findmeee outputting")
         newmatcRowMiss.collect.foreach(x => output.write(x._1._1+","+x._1._2+","+x._2._2+"\n"))
         output.close()  
         missingindsdummy2.unpersist()
