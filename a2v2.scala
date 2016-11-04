@@ -102,9 +102,9 @@ object Assign2 {
         
         var ksvd = {
             if(datafile.endsWith("large.csv")){                
-                25
+                5
             } else if(datafile.endsWith("medium.csv")){
-                30
+                20
             }else{
                 10
             }
@@ -114,9 +114,9 @@ object Assign2 {
             if(datafile.endsWith("large.csv")){                
                 3
             } else if(datafile.endsWith("medium.csv")){
-                10
+                15
             }else{
-                50
+                60
             }            
         }   
 
