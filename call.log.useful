@@ -1,24 +1,51 @@
 findmeee start code
 findmeee filename small.csv
 findmeee convert to coordinate matrix
-findmeeeThu Nov 03 20:55:21 EDT 2016
-findmeeeThu Nov 03 20:55:21 EDT 2016
+findmeeeThu Nov 03 21:37:13 EDT 2016
+findmeeeThu Nov 03 21:37:13 EDT 2016
 findmeee convert to indexed row matrix
-findmeeeThu Nov 03 20:55:21 EDT 2016
-findmeeeThu Nov 03 20:55:23 EDT 2016
+findmeeeThu Nov 03 21:37:13 EDT 2016
+findmeeeThu Nov 03 21:37:13 EDT 2016
 findmeee svd run 1 start
-findmeeeThu Nov 03 20:55:23 EDT 2016
-findmeee ksvd 24
+findmeeeThu Nov 03 21:37:13 EDT 2016
+findmeee ksvd 20
 findmeee numIterations 10
 findmeee svd run 1 end
-findmeeeThu Nov 03 20:55:24 EDT 2016
+findmeeeThu Nov 03 21:37:14 EDT 2016
 findmeee0
-findmeeeThu Nov 03 20:55:24 EDT 2016
-findmeee lsqerr8.504256661025164E-26
+findmeeeThu Nov 03 21:37:14 EDT 2016
+findmeee lsqerr1038.222606830941
+findmeee1
+findmeeeThu Nov 03 21:37:15 EDT 2016
+findmeee lsqerr910.6215218085762
+findmeee2
+findmeeeThu Nov 03 21:37:15 EDT 2016
+findmeee lsqerr785.5900161525682
+findmeee3
+findmeeeThu Nov 03 21:37:15 EDT 2016
+findmeee lsqerr677.8456238919944
+findmeee4
+findmeeeThu Nov 03 21:37:16 EDT 2016
+findmeee lsqerr598.3297907097984
+findmeee5
+findmeeeThu Nov 03 21:37:16 EDT 2016
+findmeee lsqerr542.2093741976066
+findmeee6
+findmeeeThu Nov 03 21:37:16 EDT 2016
+findmeee lsqerr501.6882207570643
+findmeee7
+findmeeeThu Nov 03 21:37:16 EDT 2016
+findmeee lsqerr470.8947941397946
+findmeee8
+findmeeeThu Nov 03 21:37:17 EDT 2016
+findmeee lsqerr446.12892501468673
+findmeee9
+findmeeeThu Nov 03 21:37:17 EDT 2016
+findmeee lsqerr425.2105496780373
 findmeee Final Missing start
-findmeeeThu Nov 03 20:55:29 EDT 2016
+findmeeeThu Nov 03 21:37:17 EDT 2016
 findmeee Final Missing end
-findmeeeThu Nov 03 20:55:29 EDT 2016
+findmeeeThu Nov 03 21:37:17 EDT 2016
 findmeee outputting
-findmeeeThu Nov 03 20:55:29 EDT 2016
+findmeeeThu Nov 03 21:37:17 EDT 2016
 findmeee end code

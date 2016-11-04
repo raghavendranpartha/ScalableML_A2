@@ -93,15 +93,16 @@ object Assign2 {
         println("findmeee svd run 1 start")
         println("findmeee"+Calendar.getInstance.getTime())
         
-        val ksvd = {
+        var ksvd = {
             if(datafile == "hdfs://noc-n063.csb.pitt.edu:9000/large.csv"){                
                 25
             } else if(datafile == "hdfs://noc-n063.csb.pitt.edu:9000/medium.csv"){
-                159
+                50
             }else{
-                24
+                15
             }
         }
+        //ksvd = 20
         val numIterations = {
             if(datafile == "hdfs://noc-n063.csb.pitt.edu:9000/large.csv"){                
                 3

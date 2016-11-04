@@ -1,0 +1,5 @@
+1103440 submit ksvd = 20; numIters = 10,6,3
+scores = 23.427, 2.58, 0.492
+
+1103857 submit ksvd = 24,159,20; numIters = convergence
+scores = 24.25, 24.31, 0.471
