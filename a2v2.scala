@@ -73,6 +73,9 @@ object Assign2 {
                 })
             res.iterator
             })
+        if(datafile.endsWith("small.csv")){
+            dat2.coalesce(4)
+        }
         //val fulldat = dat.union(missinginds)
         //var fullcmat = new CoordinateMatrix(fulldat.map(x => MatrixEntry(x._1,x._2,x._3)))
         //var fullrowmat =  fullcmat.toRowMatrix
@@ -94,23 +97,23 @@ object Assign2 {
         println("findmeee"+Calendar.getInstance.getTime())
         
         var ksvd = {
-            if(datafile == "hdfs://noc-n063.csb.pitt.edu:9000/large.csv"){                
+            if(datafile.endsWith("large.csv")){                
                 25
-            } else if(datafile == "hdfs://noc-n063.csb.pitt.edu:9000/medium.csv"){
-                50
+            } else if(datafile.endsWith("medium.csv")){
+                30
             }else{
                 15
             }
         }
         //ksvd = 20
         val numIterations = {
-            if(datafile == "hdfs://noc-n063.csb.pitt.edu:9000/large.csv"){                
+            if(datafile.endsWith("large.csv")){                
                 3
-            } else if(datafile == "hdfs://noc-n063.csb.pitt.edu:9000/medium.csv"){
-                6
-            }else{
+            } else if(datafile.endsWith("medium.csv")){
                 10
-            }
+            }else{
+                50
+            }            
         }   
 
         println("findmeee ksvd "+ksvd)

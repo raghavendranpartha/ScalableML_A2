@@ -3,3 +3,7 @@ scores = 23.427, 2.58, 0.492
 
 1103857 submit ksvd = 24,159,20; numIters = convergence
 scores = 24.25, 24.31, 0.471
+
+
+#changeeeee 1103940 submit ksvd = 24,50,15; numIters = convergence, but 10,6,3 max
+scores = 17.75, 12.46, 0.4707
