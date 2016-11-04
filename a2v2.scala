@@ -106,7 +106,7 @@ object Assign2 {
             } else if(datafile.endsWith("medium.csv")){
                 30
             }else{
-                15
+                10
             }
         }
         //ksvd = 20
@@ -129,6 +129,8 @@ object Assign2 {
         var V: org.apache.spark.mllib.linalg.Matrix = svd.V
         println("findmeee svd run 1 end")
         println("findmeee"+Calendar.getInstance.getTime())
+        var origmatmap = rmat.rows.map(x => x.index -> x.vector).cache()
+
         rmat.rows.unpersist()    
 
         //dat.unpersist()        
@@ -162,7 +164,7 @@ object Assign2 {
                 res.iterator
             }).cache()*/
 
-            /*var recmatrowslsqerr = newmat.rows.map(r => r.index -> r.vector).join(rmat.rows.map(x => x.index -> x.vector)).mapPartitions(iter => {
+            var recmatrowslsqerr = newmat.rows.map(r => r.index -> r.vector).join(origmatmap).mapPartitions(iter => {
                 var res2 = collection.mutable.ArrayBuffer.empty[(Double,Array[IndexedRow])]
                 var res = collection.mutable.ArrayBuffer.empty[IndexedRow]
                 iter.foreach(entry => {
@@ -174,14 +176,20 @@ object Assign2 {
                     })
                 res2 += ((lsqerr,res.toArray))
                 res2.iterator
-            })*/
+            })
+            newmat.rows.unpersist()
 
 
             //var recmatrowslsqerr2 = newmat.rows.map(r => r.index -> r.vector).join(rmat.rows.map(x => x.index -> x.vector)).join(irmatmissingindsdummy2AsCoords)
-            var recmatrowslsqerr = irmatmissingindsdummy2AsCoords.join(newmat.rows.map(r => r.index -> r.vector)).join(rmat.rows.map(x => x.index -> x.vector)).mapPartitions(iter => {
+           /* var recmatrowslsqerr = rmat.rows.map(x => x.index -> x.vector).leftOuterJoin(irmatmissingindsdummy2AsCoords.join(newmat.rows.map(r => r.index -> r.vector))).mapPartitions(iter => {
                 var res2 = collection.mutable.ArrayBuffer.empty[(Double,Array[IndexedRow])]
                 var res = collection.mutable.ArrayBuffer.empty[IndexedRow]
                 iter.foreach(entry => {
+                    if(entry._2._2 == None){
+                        res+=IndexedRow(entry._1,entry._2._1)
+                        lsqerr
+                    }
+                    res += entrycas
                     var missv = breeze.linalg.DenseVector(entry._2._1._1.toArray) 
                     var v1 = breeze.linalg.DenseVector(entry._2._1._2.toArray)
                     var v2 = breeze.linalg.DenseVector(entry._2._2.toArray)                                    
@@ -193,7 +201,7 @@ object Assign2 {
                     })
                 res2 += ((lsqerr,res.toArray))
                 res2.iterator
-            })
+            })*/
 
             var recmatrows = recmatrowslsqerr.flatMap(r => r._2).cache()
             lsqerr = recmatrowslsqerr.map(r => r._1).collect.sum
@@ -210,10 +218,11 @@ object Assign2 {
             V = svd.V             
             recmatrows.unpersist()
             newmat = U.multiply(smat).multiply(V.transpose)
+            newmat.rows.cache()
             iter+=1
             
         }
-        irmatmissingindsdummy2AsCoords.unpersist()
+        //irmatmissingindsdummy2AsCoords.unpersist()
 
 
 

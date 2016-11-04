@@ -1,171 +1,221 @@
 findmeee start code
 findmeee filename small.csv
 findmeee convert to coordinate matrix
-findmeeeFri Nov 04 15:39:02 EDT 2016
-findmeeeFri Nov 04 15:39:02 EDT 2016
+findmeeeFri Nov 04 18:00:41 EDT 2016
+findmeeeFri Nov 04 18:00:41 EDT 2016
 findmeee convert to indexed row matrix
-findmeeeFri Nov 04 15:39:02 EDT 2016
-findmeeeFri Nov 04 15:39:03 EDT 2016
+findmeeeFri Nov 04 18:00:41 EDT 2016
+findmeeeFri Nov 04 18:00:41 EDT 2016
 findmeee svd run 1 start
-findmeeeFri Nov 04 15:39:03 EDT 2016
-findmeee ksvd 15
+findmeeeFri Nov 04 18:00:41 EDT 2016
+findmeee ksvd 10
 findmeee numIterations 50
 findmeee svd run 1 end
-findmeeeFri Nov 04 15:39:04 EDT 2016
+findmeeeFri Nov 04 18:00:41 EDT 2016
 findmeee0
-findmeeeFri Nov 04 15:39:04 EDT 2016
-findmeee lsqerr8092.012662087973
+findmeeeFri Nov 04 18:00:41 EDT 2016
+findmeee lsqerr20741.130445880364
+findmeeeFri Nov 04 18:00:42 EDT 2016
 findmeee1
-findmeeeFri Nov 04 15:39:04 EDT 2016
-findmeee lsqerr5390.05089790893
+findmeeeFri Nov 04 18:00:42 EDT 2016
+findmeee lsqerr15440.465497774021
+findmeeeFri Nov 04 18:00:42 EDT 2016
 findmeee2
-findmeeeFri Nov 04 15:39:05 EDT 2016
-findmeee lsqerr4160.908429623147
+findmeeeFri Nov 04 18:00:42 EDT 2016
+findmeee lsqerr13072.962853262441
+findmeeeFri Nov 04 18:00:42 EDT 2016
 findmeee3
-findmeeeFri Nov 04 15:39:05 EDT 2016
-findmeee lsqerr3474.1697419442407
+findmeeeFri Nov 04 18:00:43 EDT 2016
+findmeee lsqerr11726.354073803082
+findmeeeFri Nov 04 18:00:43 EDT 2016
 findmeee4
-findmeeeFri Nov 04 15:39:05 EDT 2016
-findmeee lsqerr3033.620304866592
+findmeeeFri Nov 04 18:00:43 EDT 2016
+findmeee lsqerr10845.862983428691
+findmeeeFri Nov 04 18:00:43 EDT 2016
 findmeee5
-findmeeeFri Nov 04 15:39:06 EDT 2016
-findmeee lsqerr2724.4004492977956
+findmeeeFri Nov 04 18:00:43 EDT 2016
+findmeee lsqerr10214.773168531177
+findmeeeFri Nov 04 18:00:43 EDT 2016
 findmeee6
-findmeeeFri Nov 04 15:39:06 EDT 2016
-findmeee lsqerr2493.6706114309545
+findmeeeFri Nov 04 18:00:43 EDT 2016
+findmeee lsqerr9733.540613405934
+findmeeeFri Nov 04 18:00:44 EDT 2016
 findmeee7
-findmeeeFri Nov 04 15:39:06 EDT 2016
-findmeee lsqerr2313.6492897842286
+findmeeeFri Nov 04 18:00:44 EDT 2016
+findmeee lsqerr9350.650968649556
+findmeeeFri Nov 04 18:00:44 EDT 2016
 findmeee8
-findmeeeFri Nov 04 15:39:06 EDT 2016
-findmeee lsqerr2168.2163890848155
+findmeeeFri Nov 04 18:00:44 EDT 2016
+findmeee lsqerr9036.704569156333
+findmeeeFri Nov 04 18:00:44 EDT 2016
 findmeee9
-findmeeeFri Nov 04 15:39:07 EDT 2016
-findmeee lsqerr2047.3713247331755
+findmeeeFri Nov 04 18:00:44 EDT 2016
+findmeee lsqerr8773.511443067116
+findmeeeFri Nov 04 18:00:44 EDT 2016
 findmeee10
-findmeeeFri Nov 04 15:39:07 EDT 2016
-findmeee lsqerr1944.629781015843
+findmeeeFri Nov 04 18:00:44 EDT 2016
+findmeee lsqerr8549.06834337954
+findmeeeFri Nov 04 18:00:44 EDT 2016
 findmeee11
-findmeeeFri Nov 04 15:39:07 EDT 2016
-findmeee lsqerr1855.6511461810956
+findmeeeFri Nov 04 18:00:45 EDT 2016
+findmeee lsqerr8355.045721158804
+findmeeeFri Nov 04 18:00:45 EDT 2016
 findmeee12
-findmeeeFri Nov 04 15:39:07 EDT 2016
-findmeee lsqerr1777.4503153744536
+findmeeeFri Nov 04 18:00:45 EDT 2016
+findmeee lsqerr8185.429435411742
+findmeeeFri Nov 04 18:00:45 EDT 2016
 findmeee13
-findmeeeFri Nov 04 15:39:07 EDT 2016
-findmeee lsqerr1707.9203422064152
+findmeeeFri Nov 04 18:00:45 EDT 2016
+findmeee lsqerr8035.736780432395
+findmeeeFri Nov 04 18:00:45 EDT 2016
 findmeee14
-findmeeeFri Nov 04 15:39:08 EDT 2016
-findmeee lsqerr1645.5340305808381
+findmeeeFri Nov 04 18:00:45 EDT 2016
+findmeee lsqerr7902.540367708416
+findmeeeFri Nov 04 18:00:45 EDT 2016
 findmeee15
-findmeeeFri Nov 04 15:39:08 EDT 2016
-findmeee lsqerr1589.1535232809592
+findmeeeFri Nov 04 18:00:45 EDT 2016
+findmeee lsqerr7783.166985544451
+findmeeeFri Nov 04 18:00:45 EDT 2016
 findmeee16
-findmeeeFri Nov 04 15:39:08 EDT 2016
-findmeee lsqerr1537.9069940353997
+findmeeeFri Nov 04 18:00:45 EDT 2016
+findmeee lsqerr7675.49975846499
+findmeeeFri Nov 04 18:00:45 EDT 2016
 findmeee17
-findmeeeFri Nov 04 15:39:08 EDT 2016
-findmeee lsqerr1491.1078877285836
+findmeeeFri Nov 04 18:00:46 EDT 2016
+findmeee lsqerr7577.842855175462
+findmeeeFri Nov 04 18:00:46 EDT 2016
 findmeee18
-findmeeeFri Nov 04 15:39:08 EDT 2016
-findmeee lsqerr1448.201542006425
+findmeeeFri Nov 04 18:00:46 EDT 2016
+findmeee lsqerr7488.825056322807
+findmeeeFri Nov 04 18:00:46 EDT 2016
 findmeee19
-findmeeeFri Nov 04 15:39:09 EDT 2016
-findmeee lsqerr1408.7296032371742
+findmeeeFri Nov 04 18:00:46 EDT 2016
+findmeee lsqerr7407.3283599006645
+findmeeeFri Nov 04 18:00:46 EDT 2016
 findmeee20
-findmeeeFri Nov 04 15:39:09 EDT 2016
-findmeee lsqerr1372.3060633730697
+findmeeeFri Nov 04 18:00:46 EDT 2016
+findmeee lsqerr7332.433542782543
+findmeeeFri Nov 04 18:00:46 EDT 2016
 findmeee21
-findmeeeFri Nov 04 15:39:09 EDT 2016
-findmeee lsqerr1338.6008945952512
+findmeeeFri Nov 04 18:00:46 EDT 2016
+findmeee lsqerr7263.377876465139
+findmeeeFri Nov 04 18:00:46 EDT 2016
 findmeee22
-findmeeeFri Nov 04 15:39:09 EDT 2016
-findmeee lsqerr1307.3286488797216
+findmeeeFri Nov 04 18:00:46 EDT 2016
+findmeee lsqerr7199.522019517617
+findmeeeFri Nov 04 18:00:46 EDT 2016
 findmeee23
-findmeeeFri Nov 04 15:39:09 EDT 2016
-findmeee lsqerr1278.240304245142
+findmeeeFri Nov 04 18:00:47 EDT 2016
+findmeee lsqerr7140.3241021340555
+findmeeeFri Nov 04 18:00:47 EDT 2016
 findmeee24
-findmeeeFri Nov 04 15:39:09 EDT 2016
-findmeee lsqerr1251.1172448425996
+findmeeeFri Nov 04 18:00:47 EDT 2016
+findmeee lsqerr7085.319557817662
+findmeeeFri Nov 04 18:00:47 EDT 2016
 findmeee25
-findmeeeFri Nov 04 15:39:10 EDT 2016
-findmeee lsqerr1225.766661005544
+findmeeeFri Nov 04 18:00:47 EDT 2016
+findmeee lsqerr7034.105563816787
+findmeeeFri Nov 04 18:00:47 EDT 2016
 findmeee26
-findmeeeFri Nov 04 15:39:10 EDT 2016
-findmeee lsqerr1202.017915128352
+findmeeeFri Nov 04 18:00:47 EDT 2016
+findmeee lsqerr6986.329147359448
+findmeeeFri Nov 04 18:00:47 EDT 2016
 findmeee27
-findmeeeFri Nov 04 15:39:10 EDT 2016
-findmeee lsqerr1179.719585591031
+findmeeeFri Nov 04 18:00:47 EDT 2016
+findmeee lsqerr6941.678161882215
+findmeeeFri Nov 04 18:00:47 EDT 2016
 findmeee28
-findmeeeFri Nov 04 15:39:10 EDT 2016
-findmeee lsqerr1158.7370055980382
+findmeeeFri Nov 04 18:00:47 EDT 2016
+findmeee lsqerr6899.874465135028
+findmeeeFri Nov 04 18:00:47 EDT 2016
 findmeee29
-findmeeeFri Nov 04 15:39:10 EDT 2016
-findmeee lsqerr1138.9501785667499
+findmeeeFri Nov 04 18:00:48 EDT 2016
+findmeee lsqerr6860.668749442631
+findmeeeFri Nov 04 18:00:48 EDT 2016
 findmeee30
-findmeeeFri Nov 04 15:39:10 EDT 2016
-findmeee lsqerr1120.2519913084477
+findmeeeFri Nov 04 18:00:48 EDT 2016
+findmeee lsqerr6823.8365845356575
+findmeeeFri Nov 04 18:00:48 EDT 2016
 findmeee31
-findmeeeFri Nov 04 15:39:11 EDT 2016
-findmeee lsqerr1102.546670365623
+findmeeeFri Nov 04 18:00:48 EDT 2016
+findmeee lsqerr6789.175332783696
+findmeeeFri Nov 04 18:00:48 EDT 2016
 findmeee32
-findmeeeFri Nov 04 15:39:11 EDT 2016
-findmeee lsqerr1085.7484416750078
+findmeeeFri Nov 04 18:00:48 EDT 2016
+findmeee lsqerr6756.501682619049
+findmeeeFri Nov 04 18:00:48 EDT 2016
 findmeee33
-findmeeeFri Nov 04 15:39:11 EDT 2016
-findmeee lsqerr1069.7803630341182
+findmeeeFri Nov 04 18:00:48 EDT 2016
+findmeee lsqerr6725.649616841109
+findmeeeFri Nov 04 18:00:48 EDT 2016
 findmeee34
-findmeeeFri Nov 04 15:39:11 EDT 2016
-findmeee lsqerr1054.5733049535859
+findmeeeFri Nov 04 18:00:48 EDT 2016
+findmeee lsqerr6696.468688270016
+findmeeeFri Nov 04 18:00:49 EDT 2016
 findmeee35
-findmeeeFri Nov 04 15:39:11 EDT 2016
-findmeee lsqerr1040.0650597164488
+findmeeeFri Nov 04 18:00:49 EDT 2016
+findmeee lsqerr6668.822517097144
+findmeeeFri Nov 04 18:00:49 EDT 2016
 findmeee36
-findmeeeFri Nov 04 15:39:11 EDT 2016
-findmeee lsqerr1026.1995616002082
+findmeeeFri Nov 04 18:00:49 EDT 2016
+findmeee lsqerr6642.587454297949
+findmeeeFri Nov 04 18:00:49 EDT 2016
 findmeee37
-findmeeeFri Nov 04 15:39:12 EDT 2016
-findmeee lsqerr1012.9262036716209
+findmeeeFri Nov 04 18:00:49 EDT 2016
+findmeee lsqerr6617.651375994364
+findmeeeFri Nov 04 18:00:49 EDT 2016
 findmeee38
-findmeeeFri Nov 04 15:39:12 EDT 2016
-findmeee lsqerr1000.1992385711908
+findmeeeFri Nov 04 18:00:49 EDT 2016
+findmeee lsqerr6593.912587000665
+findmeeeFri Nov 04 18:00:49 EDT 2016
 findmeee39
-findmeeeFri Nov 04 15:39:12 EDT 2016
-findmeee lsqerr987.9772523932766
+findmeeeFri Nov 04 18:00:49 EDT 2016
+findmeee lsqerr6571.278819995028
+findmeeeFri Nov 04 18:00:49 EDT 2016
 findmeee40
-findmeeeFri Nov 04 15:39:12 EDT 2016
-findmeee lsqerr976.2227022125601
+findmeeeFri Nov 04 18:00:49 EDT 2016
+findmeee lsqerr6549.666321483137
+findmeeeFri Nov 04 18:00:50 EDT 2016
 findmeee41
-findmeeeFri Nov 04 15:39:12 EDT 2016
-findmeee lsqerr964.9015090540297
+findmeeeFri Nov 04 18:00:50 EDT 2016
+findmeee lsqerr6528.9990182125985
+findmeeeFri Nov 04 18:00:50 EDT 2016
 findmeee42
-findmeeeFri Nov 04 15:39:12 EDT 2016
-findmeee lsqerr953.9826991826775
+findmeeeFri Nov 04 18:00:50 EDT 2016
+findmeee lsqerr6509.20775885444
+findmeeeFri Nov 04 18:00:50 EDT 2016
 findmeee43
-findmeeeFri Nov 04 15:39:13 EDT 2016
-findmeee lsqerr943.4380875244963
+findmeeeFri Nov 04 18:00:50 EDT 2016
+findmeee lsqerr6490.229626195705
+findmeeeFri Nov 04 18:00:50 EDT 2016
 findmeee44
-findmeeeFri Nov 04 15:39:13 EDT 2016
-findmeee lsqerr933.2419978415248
+findmeeeFri Nov 04 18:00:50 EDT 2016
+findmeee lsqerr6472.007315170271
+findmeeeFri Nov 04 18:00:50 EDT 2016
 findmeee45
-findmeeeFri Nov 04 15:39:13 EDT 2016
-findmeee lsqerr923.3710149871499
+findmeeeFri Nov 04 18:00:50 EDT 2016
+findmeee lsqerr6454.4885720205075
+findmeeeFri Nov 04 18:00:51 EDT 2016
 findmeee46
-findmeeeFri Nov 04 15:39:13 EDT 2016
-findmeee lsqerr913.8037651782552
+findmeeeFri Nov 04 18:00:51 EDT 2016
+findmeee lsqerr6437.625689853778
+findmeeeFri Nov 04 18:00:51 EDT 2016
 findmeee47
-findmeeeFri Nov 04 15:39:13 EDT 2016
-findmeee lsqerr904.5207207506688
+findmeeeFri Nov 04 18:00:51 EDT 2016
+findmeee lsqerr6421.375055888961
+findmeeeFri Nov 04 18:00:51 EDT 2016
 findmeee48
-findmeeeFri Nov 04 15:39:14 EDT 2016
-findmeee lsqerr895.5040263246724
+findmeeeFri Nov 04 18:00:51 EDT 2016
+findmeee lsqerr6405.696745796147
+findmeeeFri Nov 04 18:00:51 EDT 2016
 findmeee49
-findmeeeFri Nov 04 15:39:14 EDT 2016
-findmeee lsqerr886.7373437075796
+findmeeeFri Nov 04 18:00:51 EDT 2016
+findmeee lsqerr6390.554160711366
+findmeeeFri Nov 04 18:00:51 EDT 2016
 findmeee Final Missing start
-findmeeeFri Nov 04 15:39:14 EDT 2016
+findmeeeFri Nov 04 18:00:51 EDT 2016
 findmeee Final Missing end
-findmeeeFri Nov 04 15:39:14 EDT 2016
+findmeeeFri Nov 04 18:00:51 EDT 2016
 findmeee outputting
-findmeeeFri Nov 04 15:39:14 EDT 2016
+findmeeeFri Nov 04 18:00:51 EDT 2016
 findmeee end code
