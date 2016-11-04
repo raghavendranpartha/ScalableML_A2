@@ -1,377 +1,957 @@
-Time 23.36  Goodness 24.2365
-Time 55.13  Goodness 6.5308
-Time 230.01  Goodness 3.7040
+Time 96.49  Goodness 23.4268
+Time 127.00  Goodness 2.5797
+Time 538.40  Goodness 0.4917
 
 The output of compiling and running your code:
 
-16/11/03 13:27:47 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
-16/11/03 13:27:47 WARN SparkConf: In Spark 1.0 and later spark.local.dir will be overridden by the value set by the cluster manager (via SPARK_LOCAL_DIRS in mesos/standalone and LOCAL_DIRS in YARN).
+16/11/03 16:44:03 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/11/03 16:44:03 WARN SparkConf: In Spark 1.0 and later spark.local.dir will be overridden by the value set by the cluster manager (via SPARK_LOCAL_DIRS in mesos/standalone and LOCAL_DIRS in YARN).
 findmeee start code
 filename hdfs://noc-n063.csb.pitt.edu:9000/small.csv
 findmeee convert to coordinate matrix
-Thu Nov 03 13:27:50 EDT 2016
-Thu Nov 03 13:27:50 EDT 2016
+findmeeeThu Nov 03 16:44:07 EDT 2016
+findmeeeThu Nov 03 16:44:07 EDT 2016
 findmeee convert to indexed row matrix
-Thu Nov 03 13:27:50 EDT 2016
+findmeeeThu Nov 03 16:44:07 EDT 2016
 
 [Stage 0:>                                                          (0 + 0) / 2]
+[Stage 0:>                                                          (0 + 1) / 2]
 [Stage 0:>                                                          (0 + 2) / 2]
 
-Thu Nov 03 13:27:56 EDT 2016
+findmeeeThu Nov 03 16:44:13 EDT 2016
 findmeee svd run 1 start
-Thu Nov 03 13:27:56 EDT 2016
+findmeeeThu Nov 03 16:44:13 EDT 2016
 
 [Stage 1:>                                                          (0 + 2) / 2]
 [Stage 1:=============================>                             (1 + 1) / 2]
 [Stage 2:>                                                          (0 + 2) / 2]
-[Stage 2:=============================>                             (1 + 1) / 2]16/11/03 13:28:03 WARN BLAS: Failed to load implementation from: com.github.fommil.netlib.NativeSystemBLAS
-16/11/03 13:28:03 WARN BLAS: Failed to load implementation from: com.github.fommil.netlib.NativeRefBLAS
+[Stage 2:=============================>                             (1 + 1) / 2]16/11/03 16:44:19 WARN BLAS: Failed to load implementation from: com.github.fommil.netlib.NativeSystemBLAS
+16/11/03 16:44:19 WARN BLAS: Failed to load implementation from: com.github.fommil.netlib.NativeRefBLAS
 
 
-16/11/03 13:28:03 WARN LAPACK: Failed to load implementation from: com.github.fommil.netlib.NativeSystemLAPACK
-16/11/03 13:28:03 WARN LAPACK: Failed to load implementation from: com.github.fommil.netlib.NativeRefLAPACK
+16/11/03 16:44:20 WARN LAPACK: Failed to load implementation from: com.github.fommil.netlib.NativeSystemLAPACK
+16/11/03 16:44:20 WARN LAPACK: Failed to load implementation from: com.github.fommil.netlib.NativeRefLAPACK
 findmeee svd run 1 end
-Thu Nov 03 13:28:03 EDT 2016
-Thu Nov 03 13:28:03 EDT 2016
-findmeee outputting
+findmeeeThu Nov 03 16:44:20 EDT 2016
+findmeee0
+findmeeeThu Nov 03 16:44:20 EDT 2016
 
-[Stage 3:>                                                          (0 + 0) / 2]
-[Stage 3:>                                                          (0 + 2) / 2]
-[Stage 3:>                  (0 + 2) / 2][Stage 5:>                  (0 + 2) / 2]
-[Stage 3:=========>         (1 + 1) / 2][Stage 5:=========>         (1 + 1) / 2]
-[Stage 5:=============================>                             (1 + 1) / 2]
-[Stage 6:>                                                          (0 + 2) / 2]
+[Stage 4:>                                                          (0 + 2) / 2]
+[Stage 4:=============================>                             (1 + 1) / 2]
+
+
+[Stage 10:=============================>                            (1 + 1) / 2]
+
+findmeee1
+findmeeeThu Nov 03 16:44:29 EDT 2016
+
+[Stage 15:>                                                         (0 + 0) / 2]
+[Stage 14:>                                                         (0 + 2) / 2]
+[Stage 14:=============================>                            (1 + 1) / 2]
+
+
+[Stage 22:=============================>                            (1 + 1) / 2]
+
+findmeee2
+findmeeeThu Nov 03 16:44:40 EDT 2016
+
+[Stage 28:>                                                         (0 + 2) / 2]
+
+
+[Stage 38:=============================>                            (1 + 1) / 2]
+
+findmeee3
+findmeeeThu Nov 03 16:44:50 EDT 2016
+
+[Stage 46:>                                                         (0 + 2) / 2]
+[Stage 46:=============================>                            (1 + 1) / 2]
+
+
+[Stage 58:=============================>                            (1 + 1) / 2]
+
+findmeee4
+findmeeeThu Nov 03 16:44:58 EDT 2016
+
+[Stage 68:>                                                         (0 + 2) / 2]
+[Stage 68:=============================>                            (1 + 1) / 2]
+
+
+[Stage 82:=============================>                            (1 + 1) / 2]
+
+findmeee5
+findmeeeThu Nov 03 16:45:05 EDT 2016
+
+[Stage 94:>                                                         (0 + 2) / 2]
+[Stage 94:=============================>                            (1 + 1) / 2]
+
+findmeee6
+findmeeeThu Nov 03 16:45:10 EDT 2016
+
+[Stage 124:============================>                            (1 + 1) / 2]
+
+findmeee7
+findmeeeThu Nov 03 16:45:18 EDT 2016
+
+[Stage 158:============================>                            (1 + 1) / 2]
+
+findmeee8
+findmeeeThu Nov 03 16:45:20 EDT 2016
+
+[Stage 196:>                                                        (0 + 2) / 2]
+[Stage 196:============================>                            (1 + 1) / 2]
+
+findmeee9
+findmeeeThu Nov 03 16:45:28 EDT 2016
+
+[Stage 238:>                                                        (0 + 2) / 2]
+
+findmeee Final Missing start
+findmeeeThu Nov 03 16:45:34 EDT 2016
+
+[Stage 284:>                                                        (0 + 2) / 2]
+[Stage 284:============================>                            (1 + 1) / 2]
+
+findmeee Final Missing end
+findmeeeThu Nov 03 16:45:35 EDT 2016
+findmeee outputting
+findmeeeThu Nov 03 16:45:35 EDT 2016
+
+[Stage 285:>                (0 + 2) / 2][Stage 307:>                (0 + 2) / 2]
+[Stage 285:========>        (1 + 1) / 2][Stage 307:========>        (1 + 1) / 2]
+[Stage 285:============================>                            (1 + 1) / 2]
 
 findmeee end code
-16/11/03 13:28:08 WARN Dispatcher: Message RemoteProcessDisconnected(10.206.0.22:57560) dropped. RpcEnv already stopped.
-16/11/03 13:28:08 WARN Dispatcher: Message RemoteProcessDisconnected(10.206.0.22:57560) dropped. RpcEnv already stopped.
-16/11/03 13:28:10 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
-16/11/03 13:28:10 WARN SparkConf: In Spark 1.0 and later spark.local.dir will be overridden by the value set by the cluster manager (via SPARK_LOCAL_DIRS in mesos/standalone and LOCAL_DIRS in YARN).
+
+
+
+16/11/03 16:45:40 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/11/03 16:45:40 WARN SparkConf: In Spark 1.0 and later spark.local.dir will be overridden by the value set by the cluster manager (via SPARK_LOCAL_DIRS in mesos/standalone and LOCAL_DIRS in YARN).
 findmeee start code
 filename hdfs://noc-n063.csb.pitt.edu:9000/medium.csv
 findmeee convert to coordinate matrix
-Thu Nov 03 13:28:13 EDT 2016
-Thu Nov 03 13:28:13 EDT 2016
+findmeeeThu Nov 03 16:45:45 EDT 2016
+findmeeeThu Nov 03 16:45:45 EDT 2016
 findmeee convert to indexed row matrix
-Thu Nov 03 13:28:13 EDT 2016
+findmeeeThu Nov 03 16:45:45 EDT 2016
 
-[Stage 0:>                                                         (0 + 0) / 31]
 [Stage 0:>                                                        (0 + 31) / 31]
-[Stage 0:==============>                                          (8 + 23) / 31]
-[Stage 0:==========================================>              (23 + 8) / 31]
+[Stage 0:=======>                                                 (4 + 27) / 31]
+[Stage 0:===================>                                    (11 + 20) / 31]
 
-Thu Nov 03 13:28:20 EDT 2016
+findmeeeThu Nov 03 16:45:51 EDT 2016
 findmeee svd run 1 start
-Thu Nov 03 13:28:20 EDT 2016
-16/11/03 13:28:20 WARN RowMatrix: The input data is not directly cached, which may hurt performance if its parent RDDs are also uncached.
-16/11/03 13:28:20 WARN ARPACK: Failed to load implementation from: com.github.fommil.netlib.NativeSystemARPACK
-16/11/03 13:28:20 WARN ARPACK: Failed to load implementation from: com.github.fommil.netlib.NativeRefARPACK
+findmeeeThu Nov 03 16:45:51 EDT 2016
+16/11/03 16:45:51 WARN RowMatrix: The input data is not directly cached, which may hurt performance if its parent RDDs are also uncached.
+16/11/03 16:45:51 WARN ARPACK: Failed to load implementation from: com.github.fommil.netlib.NativeSystemARPACK
+16/11/03 16:45:51 WARN ARPACK: Failed to load implementation from: com.github.fommil.netlib.NativeRefARPACK
 
 [Stage 1:>                                                        (0 + 31) / 31]
-[Stage 1:=========>                                               (5 + 26) / 31]
-[Stage 1:==================>                                     (10 + 21) / 31]
-[Stage 1:=====================>                                  (12 + 19) / 31]
-[Stage 1:============================>                           (16 + 15) / 31]
-[Stage 1:====================================>                   (20 + 11) / 31]
-[Stage 1:========================================>                (22 + 9) / 31]
-[Stage 1:============================================>            (24 + 7) / 31]
-[Stage 1:===============================================>         (26 + 5) / 31]
+[Stage 1:============>                                            (7 + 24) / 31]
+[Stage 1:================>                                        (9 + 22) / 31]
+[Stage 1:===================>                                    (11 + 20) / 31]
+[Stage 1:===========================>                            (15 + 16) / 31]
+[Stage 1:==============================>                         (17 + 14) / 31]
+[Stage 1:=====================================>                  (21 + 10) / 31]
+[Stage 1:=============================================>           (25 + 6) / 31]
 [Stage 1:=================================================>       (27 + 4) / 31]
-[Stage 1:===================================================>     (28 + 3) / 31]
-[Stage 1:=====================================================>   (29 + 2) / 31]
+[Stage 1:=======================================================> (30 + 1) / 31]
 [Stage 2:>                                                        (0 + 31) / 31]
-[Stage 2:=======>                                                 (4 + 27) / 31]
-[Stage 2:=========================>                              (14 + 17) / 31]
+[Stage 2:=====>                                                   (3 + 28) / 31]
+[Stage 2:=======================>                                (13 + 18) / 31]
 [Stage 2:================================>                       (18 + 13) / 31]
-[Stage 2:====================================>                   (20 + 11) / 31]
-[Stage 2:=====================================>                  (21 + 10) / 31]
-[Stage 2:========================================>                (22 + 9) / 31]
+[Stage 2:==================================>                     (19 + 12) / 31]
+[Stage 2:============================================>            (24 + 7) / 31]
 [Stage 2:=============================================>           (25 + 6) / 31]
-[Stage 2:===============================================>         (26 + 5) / 31]
-[Stage 2:===================================================>     (28 + 3) / 31]
-[Stage 2:=======================================================> (30 + 1) / 31]16/11/03 13:28:32 WARN BLAS: Failed to load implementation from: com.github.fommil.netlib.NativeSystemBLAS
-16/11/03 13:28:32 WARN BLAS: Failed to load implementation from: com.github.fommil.netlib.NativeRefBLAS
+[Stage 2:=================================================>       (27 + 4) / 31]16/11/03 16:46:03 WARN BLAS: Failed to load implementation from: com.github.fommil.netlib.NativeSystemBLAS
+16/11/03 16:46:03 WARN BLAS: Failed to load implementation from: com.github.fommil.netlib.NativeRefBLAS
 
 
-16/11/03 13:28:52 WARN RowMatrix: The input data was not directly cached, which may hurt performance if its parent RDDs are also uncached.
+
+[Stage 26:======================================================> (30 + 1) / 31]
+
+
+[Stage 62:======================================================> (30 + 1) / 31]
+
+
+[Stage 68:======================================================> (30 + 1) / 31]
+
+
+[Stage 174:=============================================>           (4 + 1) / 5]
+
+16/11/03 16:46:31 WARN RowMatrix: The input data was not directly cached, which may hurt performance if its parent RDDs are also uncached.
 findmeee svd run 1 end
-Thu Nov 03 13:28:52 EDT 2016
-Thu Nov 03 13:28:52 EDT 2016
-findmeee outputting
+findmeeeThu Nov 03 16:46:31 EDT 2016
+findmeee0
+findmeeeThu Nov 03 16:46:31 EDT 2016
 
-[Stage 280:========>        (1 + 1) / 2][Stage 282:>              (0 + 31) / 31]
-[Stage 282:>                                                      (0 + 31) / 31]
-[Stage 282:=>                                                     (1 + 30) / 31]
-[Stage 282:==============>                                        (8 + 23) / 31]
-[Stage 282:========================>                             (14 + 17) / 31]
-[Stage 282:==========================>                           (15 + 16) / 31]
-[Stage 282:=============================>                        (17 + 14) / 31]
-[Stage 282:========================================>              (23 + 8) / 31]
-[Stage 282:==========================================>            (24 + 7) / 31]
-[Stage 282:==============================================>        (26 + 5) / 31]
-[Stage 282:===============================================>       (27 + 4) / 31]
-[Stage 282:=================================================>     (28 + 3) / 31]
-[Stage 282:===================================================>   (29 + 2) / 31]
-[Stage 283:>                                                      (0 + 31) / 31]
-[Stage 283:===>                                                   (2 + 29) / 31]
-[Stage 283:====================>                                 (12 + 19) / 31]
-[Stage 283:========================>                             (14 + 17) / 31]
-[Stage 283:=================================>                    (19 + 12) / 31]
-[Stage 283:=======================================>               (22 + 9) / 31]
-[Stage 283:==========================================>            (24 + 7) / 31]
-[Stage 283:============================================>          (25 + 6) / 31]
-[Stage 283:===============================================>       (27 + 4) / 31]
-[Stage 283:===================================================>   (29 + 2) / 31]
+[Stage 282:>                                                       (0 + 0) / 31]
+[Stage 281:>              (0 + 31) / 31][Stage 282:===>           (8 + 23) / 31]
+[Stage 281:>              (0 + 31) / 31][Stage 282:======>       (15 + 16) / 31]
+[Stage 281:>              (0 + 31) / 31][Stage 282:===========>   (24 + 7) / 31]
+[Stage 281:>              (0 + 31) / 31][Stage 282:============>  (26 + 5) / 31]
+[Stage 281:>              (0 + 31) / 31][Stage 282:==============>(29 + 2) / 31]
+[Stage 281:=>             (3 + 28) / 31][Stage 282:==============>(30 + 1) / 31]
+[Stage 281:==============>                                        (8 + 23) / 31]
+[Stage 281:========================>                             (14 + 17) / 31]
+[Stage 281:==========================>                           (15 + 16) / 31]
+[Stage 281:=============================>                        (17 + 14) / 31]
+[Stage 281:==========================================>            (24 + 7) / 31]
+[Stage 281:===============================================>       (27 + 4) / 31]
+[Stage 281:===================================================>   (29 + 2) / 31]
+
+16/11/03 16:46:36 WARN RowMatrix: The input data is not directly cached, which may hurt performance if its parent RDDs are also uncached.
+
+[Stage 287:=======================================>               (22 + 9) / 31]
+[Stage 287:=================================================>     (28 + 3) / 31]
+
+16/11/03 16:46:45 WARN RowMatrix: The input data was not directly cached, which may hurt performance if its parent RDDs are also uncached.
+findmeee1
+findmeeeThu Nov 03 16:46:45 EDT 2016
+
+[Stage 537:>              (0 + 31) / 31][Stage 538:============>  (25 + 6) / 31]
+[Stage 537:>                                                      (0 + 31) / 31]
+[Stage 537:=>                                                     (1 + 30) / 31]
+[Stage 537:==============>                                        (8 + 23) / 31]
+[Stage 537:===============================>                      (18 + 13) / 31]
+[Stage 537:==============================================>        (26 + 5) / 31]
+[Stage 537:=====================================================> (30 + 1) / 31]
+
+16/11/03 16:46:47 WARN RowMatrix: The input data is not directly cached, which may hurt performance if its parent RDDs are also uncached.
+16/11/03 16:46:54 WARN RowMatrix: The input data was not directly cached, which may hurt performance if its parent RDDs are also uncached.
+findmeee2
+findmeeeThu Nov 03 16:46:54 EDT 2016
+
+[Stage 825:>              (0 + 31) / 31][Stage 826:==============>(30 + 1) / 31]
+[Stage 825:>                                                      (0 + 31) / 31]
+[Stage 825:=>                                                     (1 + 30) / 31]
+[Stage 825:====================>                                 (12 + 19) / 31]
+[Stage 825:==========================================>            (24 + 7) / 31]
+
+16/11/03 16:46:55 WARN RowMatrix: The input data is not directly cached, which may hurt performance if its parent RDDs are also uncached.
+16/11/03 16:47:01 WARN RowMatrix: The input data was not directly cached, which may hurt performance if its parent RDDs are also uncached.
+findmeee3
+findmeeeThu Nov 03 16:47:01 EDT 2016
+
+[Stage 1195:>                                                     (0 + 31) / 31]
+[Stage 1195:========>                                             (5 + 26) / 31]
+[Stage 1195:==================================>                  (20 + 11) / 31]
+
+16/11/03 16:47:03 WARN RowMatrix: The input data is not directly cached, which may hurt performance if its parent RDDs are also uncached.
+
+[Stage 1614:===============================================>      (27 + 4) / 31]
+[Stage 1614:================================================>     (28 + 3) / 31]
+
+16/11/03 16:47:12 WARN RowMatrix: The input data was not directly cached, which may hurt performance if its parent RDDs are also uncached.
+findmeee4
+findmeeeThu Nov 03 16:47:12 EDT 2016
+
+[Stage 1647:>                                                     (0 + 31) / 31]
+[Stage 1647:==============================>                      (18 + 13) / 31]
+[Stage 1647:================================================>     (28 + 3) / 31]
+[Stage 1647:==================================================>   (29 + 2) / 31]
+
+16/11/03 16:47:14 WARN RowMatrix: The input data is not directly cached, which may hurt performance if its parent RDDs are also uncached.
+
+[Stage 1830:====================================================> (30 + 1) / 31]
+
+
+[Stage 1934:================================================>     (28 + 3) / 31]
+[Stage 1934:==================================================>   (29 + 2) / 31]
+
+16/11/03 16:47:24 WARN RowMatrix: The input data was not directly cached, which may hurt performance if its parent RDDs are also uncached.
+findmeee5
+findmeeeThu Nov 03 16:47:25 EDT 2016
+
+[Stage 2181:>                                                     (0 + 31) / 31]
+[Stage 2181:=============>                                        (8 + 23) / 31]
+[Stage 2181:==================================>                  (20 + 11) / 31]
+[Stage 2181:=========================================>            (24 + 7) / 31]
+[Stage 2181:==================================================>   (29 + 2) / 31]
+
+16/11/03 16:47:27 WARN RowMatrix: The input data is not directly cached, which may hurt performance if its parent RDDs are also uncached.
+
+[Stage 2197:====================================================> (30 + 1) / 31]
+
+
+[Stage 2587:==================================================>   (29 + 2) / 31]
+[Stage 2587:====================================================> (30 + 1) / 31]
+
+16/11/03 16:47:36 WARN RowMatrix: The input data was not directly cached, which may hurt performance if its parent RDDs are also uncached.
+findmeee Final Missing start
+findmeeeThu Nov 03 16:47:36 EDT 2016
+
+[Stage 2797:>                                                     (0 + 31) / 31]
+[Stage 2797:===>                                                  (2 + 29) / 31]
+[Stage 2797:===================================>                 (21 + 10) / 31]
+[Stage 2797:================================================>     (28 + 3) / 31]
+
+findmeee Final Missing end
+findmeeeThu Nov 03 16:47:38 EDT 2016
+findmeee outputting
+findmeeeThu Nov 03 16:47:38 EDT 2016
+
+[Stage 2812:>                                                     (0 + 31) / 31]
+[Stage 2812:=============>                                        (8 + 23) / 31]
+[Stage 2812:==============================>                      (18 + 13) / 31]
+[Stage 2812:=============================================>        (26 + 5) / 31]
+[Stage 2812:===============================================>      (27 + 4) / 31]
+[Stage 2812:====================================================> (30 + 1) / 31]
+[Stage 2813:>                                                     (0 + 31) / 31]
+[Stage 2813:=============>                                        (8 + 23) / 31]
+[Stage 2813:===================================>                 (21 + 10) / 31]
+[Stage 2813:=========================================>            (24 + 7) / 31]
+[Stage 2813:===========================================>          (25 + 6) / 31]
+[Stage 2813:===============================================>      (27 + 4) / 31]
+[Stage 2813:================================================>     (28 + 3) / 31]
+[Stage 2813:==================================================>   (29 + 2) / 31]
 
 findmeee end code
-16/11/03 13:29:05 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
-16/11/03 13:29:05 WARN SparkConf: In Spark 1.0 and later spark.local.dir will be overridden by the value set by the cluster manager (via SPARK_LOCAL_DIRS in mesos/standalone and LOCAL_DIRS in YARN).
+
+
+
+16/11/03 16:47:47 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/11/03 16:47:47 WARN SparkConf: In Spark 1.0 and later spark.local.dir will be overridden by the value set by the cluster manager (via SPARK_LOCAL_DIRS in mesos/standalone and LOCAL_DIRS in YARN).
 findmeee start code
 filename hdfs://noc-n063.csb.pitt.edu:9000/large.csv
 findmeee convert to coordinate matrix
-Thu Nov 03 13:29:09 EDT 2016
-Thu Nov 03 13:29:09 EDT 2016
+findmeeeThu Nov 03 16:47:51 EDT 2016
+findmeeeThu Nov 03 16:47:51 EDT 2016
 findmeee convert to indexed row matrix
-Thu Nov 03 13:29:09 EDT 2016
+findmeeeThu Nov 03 16:47:51 EDT 2016
 
 [Stage 0:>                                                        (0 + 0) / 343]
-[Stage 0:>                                                       (0 + 64) / 343]
-[Stage 0:>                                                       (0 + 68) / 343]
-[Stage 0:>                                                       (0 + 80) / 343]
+[Stage 0:>                                                       (0 + 44) / 343]
+[Stage 0:>                                                       (0 + 88) / 343]
+[Stage 0:>                                                       (0 + 92) / 343]
 [Stage 0:>                                                       (0 + 96) / 343]
+[Stage 0:>                                                      (0 + 104) / 343]
 [Stage 0:>                                                      (0 + 108) / 343]
-[Stage 0:>                                                      (0 + 111) / 343]
-[Stage 0:===>                                                  (22 + 110) / 343]
-[Stage 0:====>                                                 (29 + 109) / 343]
-[Stage 0:==========>                                           (67 + 108) / 343]
-[Stage 0:==============>                                       (89 + 109) / 343]
-[Stage 0:=================>                                   (111 + 108) / 343]
-[Stage 0:====================>                                (133 + 108) / 343]
-[Stage 0:========================>                            (156 + 108) / 343]
-[Stage 0:============================>                        (184 + 108) / 343]
-[Stage 0:================================>                    (210 + 108) / 343]
-[Stage 0:====================================>                (236 + 107) / 343]
-[Stage 0:==========================================>           (268 + 75) / 343]
-[Stage 0:===============================================>      (300 + 43) / 343]
-[Stage 0:================================================>     (311 + 32) / 343]
-[Stage 0:==================================================>   (319 + 24) / 343]
+[Stage 0:>                                                      (1 + 111) / 343]
+[Stage 0:>                                                      (4 + 108) / 343]
+[Stage 0:=>                                                    (11 + 117) / 343]
+[Stage 0:====>                                                 (29 + 113) / 343]
+[Stage 0:==========>                                           (69 + 108) / 343]
+[Stage 0:==============>                                       (92 + 108) / 343]
+[Stage 0:=================>                                   (111 + 111) / 343]
+[Stage 0:======================>                              (146 + 108) / 343]
+[Stage 0:============================>                        (185 + 110) / 343]
+[Stage 0:===================================>                 (230 + 109) / 343]
+[Stage 0:========================================>             (255 + 88) / 343]
+[Stage 0:===========================================>          (277 + 66) / 343]
+[Stage 0:=============================================>        (290 + 53) / 343]
 [Stage 0:==================================================>   (323 + 20) / 343]
-[Stage 0:===================================================>  (325 + 18) / 343]
-[Stage 0:====================================================> (331 + 12) / 343]
-[Stage 0:=====================================================> (334 + 9) / 343]
+[Stage 0:===================================================>  (328 + 15) / 343]
+[Stage 0:===================================================>  (329 + 14) / 343]
+[Stage 0:===================================================>  (330 + 13) / 343]
 [Stage 0:=====================================================> (335 + 8) / 343]
+[Stage 0:======================================================>(338 + 5) / 343]
 [Stage 0:======================================================>(339 + 4) / 343]
 
-Thu Nov 03 13:29:21 EDT 2016
+findmeeeThu Nov 03 16:48:05 EDT 2016
 findmeee svd run 1 start
-Thu Nov 03 13:29:21 EDT 2016
-16/11/03 13:29:21 WARN RowMatrix: The input data is not directly cached, which may hurt performance if its parent RDDs are also uncached.
-16/11/03 13:29:21 WARN ARPACK: Failed to load implementation from: com.github.fommil.netlib.NativeSystemARPACK
-16/11/03 13:29:21 WARN ARPACK: Failed to load implementation from: com.github.fommil.netlib.NativeRefARPACK
+findmeeeThu Nov 03 16:48:05 EDT 2016
+16/11/03 16:48:05 WARN RowMatrix: The input data is not directly cached, which may hurt performance if its parent RDDs are also uncached.
+16/11/03 16:48:05 WARN ARPACK: Failed to load implementation from: com.github.fommil.netlib.NativeSystemARPACK
+16/11/03 16:48:05 WARN ARPACK: Failed to load implementation from: com.github.fommil.netlib.NativeRefARPACK
 
 [Stage 1:>                                                      (0 + 108) / 343]
-[Stage 1:>                                                      (0 + 110) / 343]
-[Stage 1:=>                                                    (10 + 108) / 343]
-[Stage 1:===>                                                  (23 + 108) / 343]
-[Stage 1:=====>                                                (35 + 108) / 343]
-[Stage 1:======>                                               (41 + 108) / 343]
-[Stage 1:==========>                                           (65 + 108) / 343]
-[Stage 1:=============>                                        (84 + 108) / 343]
-[Stage 1:===============>                                     (102 + 108) / 343]
+[Stage 1:>                                                      (4 + 108) / 343]
+[Stage 1:==>                                                   (15 + 108) / 343]
+[Stage 1:====>                                                 (31 + 108) / 343]
+[Stage 1:======>                                               (39 + 108) / 343]
+[Stage 1:========>                                             (51 + 108) / 343]
+[Stage 1:===========>                                          (73 + 109) / 343]
+[Stage 1:===============>                                     (101 + 108) / 343]
 [Stage 1:==================>                                  (117 + 108) / 343]
-[Stage 1:=====================>                               (139 + 108) / 343]
-[Stage 1:=========================>                           (168 + 108) / 343]
-[Stage 1:============================>                        (187 + 109) / 343]
-[Stage 1:===============================>                     (205 + 108) / 343]
+[Stage 1:====================>                                (133 + 108) / 343]
+[Stage 1:=======================>                             (153 + 109) / 343]
+[Stage 1:===========================>                         (181 + 108) / 343]
+[Stage 1:================================>                    (212 + 108) / 343]
 [Stage 1:====================================>                (237 + 106) / 343]
-[Stage 1:=========================================>            (265 + 78) / 343]
-[Stage 1:=============================================>        (291 + 52) / 343]
-[Stage 1:==================================================>   (323 + 20) / 343]
-[Stage 1:====================================================> (331 + 12) / 343]
+[Stage 1:========================================>             (260 + 83) / 343]
+[Stage 1:===========================================>          (278 + 65) / 343]
+[Stage 1:================================================>     (311 + 32) / 343]
+[Stage 1:==================================================>   (320 + 23) / 343]
+[Stage 1:==================================================>   (322 + 21) / 343]
+[Stage 1:===================================================>  (326 + 17) / 343]
+[Stage 1:===================================================>  (330 + 13) / 343]
+[Stage 1:====================================================> (332 + 11) / 343]
+[Stage 1:=====================================================> (334 + 9) / 343]
+[Stage 1:=====================================================> (335 + 8) / 343]
 [Stage 1:=====================================================> (336 + 7) / 343]
-[Stage 1:======================================================>(339 + 4) / 343]
+[Stage 1:======================================================>(337 + 6) / 343]
+[Stage 1:======================================================>(338 + 5) / 343]
+[Stage 1:======================================================>(340 + 3) / 343]
 [Stage 1:======================================================>(342 + 1) / 343]
 [Stage 2:>                                                      (0 + 108) / 343]
-[Stage 2:>                                                      (1 + 108) / 343]
-[Stage 2:=>                                                     (8 + 108) / 343]
-[Stage 2:======>                                               (40 + 108) / 343]
-[Stage 2:==========>                                           (65 + 110) / 343]
+[Stage 2:>                                                      (0 + 109) / 343]
+[Stage 2:=>                                                     (9 + 109) / 343]
+[Stage 2:=====>                                                (35 + 108) / 343]
+[Stage 2:=====>                                                (36 + 108) / 343]
+[Stage 2:==========>                                           (67 + 108) / 343]
 [Stage 2:===========>                                          (74 + 108) / 343]
-[Stage 2:===========>                                          (76 + 108) / 343]
-[Stage 2:==============>                                       (89 + 108) / 343]
-[Stage 2:=================>                                   (116 + 108) / 343]
-[Stage 2:======================>                              (143 + 108) / 343]
-[Stage 2:========================>                            (158 + 108) / 343]
-[Stage 2:============================>                        (182 + 109) / 343]
-[Stage 2:================================>                    (209 + 108) / 343]
-[Stage 2:===================================>                 (231 + 108) / 343]
-[Stage 2:=========================================>            (261 + 82) / 343]
-[Stage 2:=================================================>    (315 + 28) / 343]
-[Stage 2:=====================================================> (335 + 8) / 343]
-[Stage 2:=====================================================> (336 + 7) / 343]
-[Stage 2:======================================================>(337 + 6) / 343]
-[Stage 2:======================================================>(339 + 4) / 343]16/11/03 13:29:37 WARN BLAS: Failed to load implementation from: com.github.fommil.netlib.NativeSystemBLAS
-16/11/03 13:29:37 WARN BLAS: Failed to load implementation from: com.github.fommil.netlib.NativeRefBLAS
+[Stage 2:==============>                                       (91 + 109) / 343]
+[Stage 2:================>                                    (108 + 108) / 343]
+[Stage 2:===================>                                 (124 + 108) / 343]
+[Stage 2:======================>                              (146 + 108) / 343]
+[Stage 2:==========================>                          (170 + 108) / 343]
+[Stage 2:=============================>                       (192 + 109) / 343]
+[Stage 2:=================================>                   (217 + 109) / 343]
+[Stage 2:====================================>                (238 + 105) / 343]
+[Stage 2:============================================>         (284 + 59) / 343]
+[Stage 2:================================================>     (305 + 38) / 343]
+[Stage 2:================================================>     (311 + 32) / 343]
+[Stage 2:===================================================>  (329 + 14) / 343]
+[Stage 2:=====================================================> (334 + 9) / 343]
+[Stage 2:=====================================================> (335 + 8) / 343]16/11/03 16:48:24 WARN BLAS: Failed to load implementation from: com.github.fommil.netlib.NativeSystemBLAS
+16/11/03 16:48:24 WARN BLAS: Failed to load implementation from: com.github.fommil.netlib.NativeRefBLAS
 
 
 
+[Stage 5:==========>                                           (65 + 115) / 343]
+[Stage 5:========================>                            (157 + 106) / 343]
 [Stage 6:>                                                         (0 + 0) / 18]
 
 
-[Stage 8:===================================================>  (324 + 19) / 343]
+[Stage 8:=============================================>        (289 + 51) / 343]
 
 
-[Stage 143:==============================>                    (207 + 108) / 343]
-[Stage 143:====================================================>(341 + 2) / 343]
+[Stage 11:==============================>                      (196 + 76) / 343]
+[Stage 11:============================================>        (291 + 43) / 343]
 
 
-[Stage 155:================================================>    (311 + 8) / 343]
-[Stage 155:==================================================>  (328 + 4) / 343]
+[Stage 20:======================================>              (249 + 60) / 343]
 
 
-[Stage 176:===================================>                (232 + 66) / 343]
+[Stage 26:=======================================>             (254 + 58) / 343]
 
-16/11/03 13:30:13 WARN RowMatrix: The input data was not directly cached, which may hurt performance if its parent RDDs are also uncached.
+
+[Stage 32:======================>                              (148 + 96) / 343]
+[Stage 32:================================================>    (316 + 27) / 343]
+
+
+[Stage 50:===>                                                 (23 + 119) / 343]
+[Stage 50:========================>                            (157 + 89) / 343]
+[Stage 50:==============================================>      (304 + 34) / 343]
+
+
+[Stage 68:=================================>                  (223 + 111) / 343]
+
+
+[Stage 80:=====================================================>(338 + 4) / 343]
+[Stage 80:=====================================================>(342 + 1) / 343]
+
+
+[Stage 113:====================================================>(342 + 1) / 343]
+
+
+[Stage 128:====================================================>(339 + 4) / 343]
+
+
+[Stage 182:===================================================> (331 + 4) / 343]
+
+
+[Stage 191:================================================>   (317 + 12) / 343]
+[Stage 191:==================================================>  (328 + 8) / 343]
+
+
+[Stage 198:=============================================>         (15 + 3) / 18]
+[Stage 198:================================================>      (16 + 2) / 18]
+
+
+[Stage 209:============================================>       (295 + 12) / 343]
+[Stage 209:============================================>       (296 + 12) / 343]
+[Stage 209:===================================================> (336 + 4) / 343]
+
+16/11/03 16:49:11 WARN RowMatrix: The input data was not directly cached, which may hurt performance if its parent RDDs are also uncached.
 findmeee svd run 1 end
-Thu Nov 03 13:30:13 EDT 2016
-Thu Nov 03 13:30:13 EDT 2016
-findmeee outputting
+findmeeeThu Nov 03 16:49:11 EDT 2016
+findmeee0
+findmeeeThu Nov 03 16:49:11 EDT 2016
 
-[Stage 211:>                                                        (0 + 2) / 2]
-[Stage 211:>                (0 + 2) / 2][Stage 213:>            (0 + 106) / 343]
-[Stage 211:========>        (1 + 1) / 2][Stage 213:>            (0 + 107) / 343]
-[Stage 213:>                                                    (0 + 108) / 343]
-[Stage 213:>                                                    (1 + 108) / 343]
-[Stage 213:>                                                    (2 + 108) / 343]
-[Stage 213:>                                                    (3 + 108) / 343]
-[Stage 213:=>                                                  (13 + 108) / 343]
-[Stage 213:====>                                               (31 + 108) / 343]
-[Stage 213:======>                                             (44 + 108) / 343]
-[Stage 213:=======>                                            (49 + 108) / 343]
-[Stage 213:=========>                                          (60 + 108) / 343]
-[Stage 213:==========>                                         (69 + 108) / 343]
-[Stage 213:==========>                                         (71 + 108) / 343]
-[Stage 213:==========>                                         (72 + 108) / 343]
-[Stage 213:===========>                                        (73 + 108) / 343]
-[Stage 213:===========>                                        (75 + 108) / 343]
-[Stage 213:===========>                                        (78 + 108) / 343]
-[Stage 213:===========>                                        (79 + 108) / 343]
-[Stage 213:============>                                       (81 + 108) / 343]
-[Stage 213:=============>                                      (86 + 108) / 343]
-[Stage 213:=============>                                      (92 + 108) / 343]
-[Stage 213:===============>                                    (99 + 108) / 343]
-[Stage 213:===============>                                   (105 + 108) / 343]
-[Stage 213:=================>                                 (115 + 108) / 343]
-[Stage 213:==================>                                (123 + 108) / 343]
-[Stage 213:===================>                               (134 + 108) / 343]
-[Stage 213:====================>                              (136 + 108) / 343]
-[Stage 213:====================>                              (141 + 108) / 343]
-[Stage 213:======================>                            (150 + 108) / 343]
-[Stage 213:=======================>                           (160 + 108) / 343]
-[Stage 213:========================>                          (163 + 108) / 343]
-[Stage 213:========================>                          (167 + 108) / 343]
-[Stage 213:========================>                          (168 + 108) / 343]
-[Stage 213:=========================>                         (172 + 108) / 343]
-[Stage 213:==========================>                        (175 + 108) / 343]
-[Stage 213:==========================>                        (176 + 108) / 343]
-[Stage 213:==========================>                        (180 + 108) / 343]
-[Stage 213:==========================>                        (181 + 108) / 343]
-[Stage 213:===========================>                       (185 + 108) / 343]
-[Stage 213:===========================>                       (186 + 108) / 343]
-[Stage 213:============================>                      (191 + 108) / 343]
-[Stage 213:============================>                      (193 + 108) / 343]
-[Stage 213:=============================>                     (201 + 108) / 343]
-[Stage 213:==============================>                    (206 + 108) / 343]
-[Stage 213:==============================>                    (207 + 108) / 343]
-[Stage 213:===============================>                   (210 + 108) / 343]
-[Stage 213:===============================>                   (213 + 108) / 343]
-[Stage 213:===============================>                   (214 + 108) / 343]
-[Stage 213:================================>                  (221 + 108) / 343]
-[Stage 213:=================================>                 (222 + 108) / 343]
-[Stage 213:=================================>                 (223 + 108) / 343]
-[Stage 213:=================================>                 (226 + 108) / 343]
-[Stage 213:=================================>                 (227 + 108) / 343]
-[Stage 213:==================================>                (231 + 108) / 343]
-[Stage 213:===================================>               (239 + 104) / 343]
-[Stage 213:=====================================>              (245 + 98) / 343]
-[Stage 213:=====================================>              (247 + 96) / 343]
-[Stage 213:=====================================>              (250 + 93) / 343]
-[Stage 213:======================================>             (251 + 92) / 343]
-[Stage 213:======================================>             (256 + 87) / 343]
-[Stage 213:=======================================>            (258 + 85) / 343]
-[Stage 213:=======================================>            (259 + 84) / 343]
-[Stage 213:========================================>           (265 + 78) / 343]
-[Stage 213:========================================>           (270 + 73) / 343]
-[Stage 213:=========================================>          (272 + 71) / 343]
-[Stage 213:=========================================>          (274 + 69) / 343]
-[Stage 213:=========================================>          (276 + 67) / 343]
-[Stage 213:==========================================>         (280 + 63) / 343]
-[Stage 213:==========================================>         (281 + 62) / 343]
-[Stage 213:===========================================>        (285 + 58) / 343]
-[Stage 213:===========================================>        (287 + 56) / 343]
-[Stage 213:============================================>       (295 + 48) / 343]
-[Stage 213:=============================================>      (299 + 44) / 343]
-[Stage 213:=============================================>      (300 + 43) / 343]
-[Stage 213:==============================================>     (309 + 34) / 343]
-[Stage 213:================================================>   (318 + 25) / 343]
-[Stage 213:=================================================>  (324 + 19) / 343]
-[Stage 213:=================================================>  (328 + 15) / 343]
-[Stage 213:==================================================> (333 + 10) / 343]
-[Stage 213:===================================================> (334 + 9) / 343]
-[Stage 213:===================================================> (336 + 7) / 343]
-[Stage 213:====================================================>(337 + 6) / 343]
-[Stage 213:====================================================>(338 + 5) / 343]
-[Stage 213:====================================================>(339 + 4) / 343]
-[Stage 213:====================================================>(340 + 3) / 343]
-[Stage 213:====================================================>(341 + 2) / 343]
-[Stage 213:====================================================>(342 + 1) / 343]
-[Stage 214:>                                                    (0 + 108) / 343]
-[Stage 214:>                                                    (2 + 108) / 343]
-[Stage 214:>                                                    (4 + 108) / 343]
-[Stage 214:>                                                    (5 + 108) / 343]
-[Stage 214:=>                                                   (9 + 108) / 343]
-[Stage 214:=>                                                  (10 + 108) / 343]
-[Stage 214:==>                                                 (15 + 108) / 343]
-[Stage 214:=======>                                            (47 + 108) / 343]
-[Stage 214:==========>                                         (68 + 108) / 343]
-[Stage 214:============>                                       (83 + 108) / 343]
-[Stage 214:=============>                                      (86 + 108) / 343]
-[Stage 214:==============>                                     (94 + 108) / 343]
-[Stage 214:==============>                                     (96 + 108) / 343]
-[Stage 214:==============>                                     (98 + 108) / 343]
-[Stage 214:===============>                                    (99 + 108) / 343]
-[Stage 214:===============>                                   (102 + 108) / 343]
-[Stage 214:===============>                                   (106 + 108) / 343]
-[Stage 214:================>                                  (108 + 108) / 343]
-[Stage 214:================>                                  (109 + 108) / 343]
-[Stage 214:================>                                  (111 + 108) / 343]
-[Stage 214:================>                                  (113 + 108) / 343]
-[Stage 214:================>                                  (114 + 108) / 343]
-[Stage 214:=================>                                 (121 + 108) / 343]
-[Stage 214:===================>                               (129 + 108) / 343]
-[Stage 214:=======================>                           (156 + 108) / 343]
-[Stage 214:=======================>                           (158 + 108) / 343]
-[Stage 214:========================>                          (167 + 108) / 343]
-[Stage 214:==========================>                        (176 + 108) / 343]
-[Stage 214:===============================>                   (215 + 108) / 343]
-[Stage 214:=================================>                 (223 + 108) / 343]
-[Stage 214:===================================>               (236 + 107) / 343]
-[Stage 214:=========================================>          (272 + 71) / 343]
-[Stage 214:==========================================>         (283 + 60) / 343]
-[Stage 214:===========================================>        (284 + 59) / 343]
-[Stage 214:===========================================>        (286 + 57) / 343]
-[Stage 214:===========================================>        (287 + 56) / 343]
-[Stage 214:===========================================>        (288 + 55) / 343]
-[Stage 214:============================================>       (294 + 49) / 343]
-[Stage 214:=============================================>      (297 + 46) / 343]
-[Stage 214:=============================================>      (300 + 43) / 343]
-[Stage 214:==============================================>     (304 + 39) / 343]
-[Stage 214:==============================================>     (308 + 35) / 343]
-[Stage 214:================================================>   (322 + 21) / 343]
-[Stage 214:=================================================>  (327 + 16) / 343]
-[Stage 214:==================================================> (333 + 10) / 343]
-[Stage 214:===================================================> (334 + 9) / 343]
-[Stage 214:====================================================>(341 + 2) / 343]
+[Stage 212:>                                                    (0 + 108) / 343]
+[Stage 212:>            (0 + 108) / 343][Stage 213:>              (0 + 0) / 343]
+[Stage 212:>            (2 + 108) / 343][Stage 213:>              (0 + 0) / 343]
+[Stage 212:>            (4 + 108) / 343][Stage 213:>              (0 + 0) / 343]
+[Stage 212:>            (6 + 108) / 343][Stage 213:>              (0 + 0) / 343]
+[Stage 212:>            (9 + 108) / 343][Stage 213:>              (0 + 0) / 343]
+[Stage 212:>           (22 + 109) / 343][Stage 213:>              (0 + 0) / 343]
+[Stage 212:=>          (36 + 108) / 343][Stage 213:>              (0 + 0) / 343]
+[Stage 212:=>          (42 + 108) / 343][Stage 213:>              (0 + 0) / 343]
+[Stage 212:=>          (45 + 108) / 343][Stage 213:>              (0 + 0) / 343]
+[Stage 212:=>          (54 + 108) / 343][Stage 213:>              (0 + 0) / 343]
+[Stage 212:==>         (61 + 108) / 343][Stage 213:>              (0 + 0) / 343]
+[Stage 212:==>         (63 + 108) / 343][Stage 213:>              (0 + 0) / 343]
+[Stage 212:==>         (64 + 108) / 343][Stage 213:>              (0 + 0) / 343]
+[Stage 212:==>         (67 + 108) / 343][Stage 213:>              (0 + 0) / 343]
+[Stage 212:==>         (71 + 108) / 343][Stage 213:>              (0 + 0) / 343]
+[Stage 212:==>         (72 + 108) / 343][Stage 213:>              (0 + 0) / 343]
+[Stage 212:==>         (73 + 108) / 343][Stage 213:>              (0 + 0) / 343]
+[Stage 212:==>         (76 + 108) / 343][Stage 213:>              (0 + 0) / 343]
+[Stage 212:==>         (78 + 108) / 343][Stage 213:>              (0 + 0) / 343]
+[Stage 212:==>         (79 + 108) / 343][Stage 213:>              (0 + 0) / 343]
+[Stage 212:==>         (82 + 108) / 343][Stage 213:>              (0 + 0) / 343]
+[Stage 212:==>         (83 + 108) / 343][Stage 213:>              (0 + 0) / 343]
+[Stage 212:===>        (87 + 108) / 343][Stage 213:>              (0 + 0) / 343]
+[Stage 212:===>        (90 + 108) / 343][Stage 213:>              (0 + 0) / 343]
+[Stage 212:===>        (91 + 108) / 343][Stage 213:>              (0 + 0) / 343]
+[Stage 212:===>        (94 + 108) / 343][Stage 213:>              (0 + 0) / 343]
+[Stage 212:===>       (102 + 108) / 343][Stage 213:>              (0 + 0) / 343]
+[Stage 212:===>       (107 + 108) / 343][Stage 213:>              (0 + 0) / 343]
+[Stage 212:===>       (109 + 108) / 343][Stage 213:>              (0 + 0) / 343]
+[Stage 212:===>       (114 + 108) / 343][Stage 213:>              (0 + 0) / 343]
+[Stage 212:===>       (121 + 108) / 343][Stage 213:>              (0 + 0) / 343]
+[Stage 212:====>      (127 + 108) / 343][Stage 213:>              (0 + 0) / 343]
+[Stage 212:====>      (132 + 108) / 343][Stage 213:>              (0 + 0) / 343]
+[Stage 212:====>      (143 + 108) / 343][Stage 213:>              (0 + 0) / 343]
+[Stage 212:====>      (152 + 108) / 343][Stage 213:>              (0 + 0) / 343]
+[Stage 212:=====>     (157 + 108) / 343][Stage 213:>              (0 + 0) / 343]
+[Stage 212:=====>     (165 + 108) / 343][Stage 213:>              (0 + 0) / 343]
+[Stage 212:=====>     (168 + 108) / 343][Stage 213:>              (0 + 0) / 343]
+[Stage 212:=====>     (170 + 108) / 343][Stage 213:>              (0 + 0) / 343]
+[Stage 212:=====>     (171 + 108) / 343][Stage 213:>              (0 + 0) / 343]
+[Stage 212:=====>     (175 + 108) / 343][Stage 213:>              (0 + 0) / 343]
+[Stage 212:=====>     (177 + 108) / 343][Stage 213:>              (0 + 0) / 343]
+[Stage 212:=====>     (178 + 108) / 343][Stage 213:>              (0 + 0) / 343]
+[Stage 212:=====>     (179 + 108) / 343][Stage 213:>              (0 + 0) / 343]
+[Stage 212:=====>     (180 + 108) / 343][Stage 213:>              (0 + 0) / 343]
+[Stage 212:=====>     (181 + 108) / 343][Stage 213:>              (0 + 0) / 343]
+[Stage 212:=====>     (183 + 108) / 343][Stage 213:>              (0 + 0) / 343]
+[Stage 212:=====>     (185 + 108) / 343][Stage 213:>              (0 + 0) / 343]
+[Stage 212:======>    (190 + 108) / 343][Stage 213:>              (0 + 0) / 343]
+[Stage 212:======>    (192 + 108) / 343][Stage 213:>              (0 + 0) / 343]
+[Stage 212:======>    (193 + 108) / 343][Stage 213:>              (0 + 0) / 343]
+[Stage 212:======>    (196 + 108) / 343][Stage 213:>              (0 + 0) / 343]
+[Stage 212:======>    (201 + 108) / 343][Stage 213:>              (0 + 0) / 343]
+[Stage 212:======>    (207 + 108) / 343][Stage 213:>              (0 + 0) / 343]
+[Stage 212:======>    (211 + 108) / 343][Stage 213:>              (0 + 0) / 343]
+[Stage 212:======>    (217 + 108) / 343][Stage 213:>              (0 + 0) / 343]
+[Stage 212:=======>   (223 + 108) / 343][Stage 213:>              (0 + 0) / 343]
+[Stage 212:=======>   (224 + 108) / 343][Stage 213:>              (0 + 0) / 343]
+[Stage 212:=======>   (225 + 108) / 343][Stage 213:>              (0 + 0) / 343]
+[Stage 212:=======>   (226 + 108) / 343][Stage 213:>              (0 + 0) / 343]
+[Stage 212:=======>   (227 + 108) / 343][Stage 213:>              (0 + 0) / 343]
+[Stage 212:=======>   (228 + 108) / 343][Stage 213:>              (0 + 0) / 343]
+[Stage 212:=======>   (229 + 108) / 343][Stage 213:>              (0 + 0) / 343]
+[Stage 212:=======>   (230 + 108) / 343][Stage 213:>              (0 + 0) / 343]
+[Stage 212:=======>   (233 + 108) / 343][Stage 213:>              (0 + 0) / 343]
+[Stage 212:=======>   (234 + 108) / 343][Stage 213:>              (0 + 0) / 343]
+[Stage 212:=======>   (235 + 108) / 343][Stage 213:>              (0 + 0) / 343]
+[Stage 212:=======>   (236 + 107) / 343][Stage 213:>              (0 + 1) / 343]
+[Stage 212:=======>   (238 + 105) / 343][Stage 213:>              (0 + 3) / 343]
+[Stage 212:=======>   (239 + 104) / 343][Stage 213:>              (0 + 4) / 343]
+[Stage 212:=======>   (240 + 103) / 343][Stage 213:>              (0 + 5) / 343]
+[Stage 212:=======>   (242 + 101) / 343][Stage 213:>              (0 + 7) / 343]
+[Stage 212:========>   (245 + 98) / 343][Stage 213:>             (0 + 10) / 343]
+[Stage 212:========>   (245 + 98) / 343][Stage 213:>             (1 + 10) / 343]
+[Stage 212:========>   (245 + 98) / 343][Stage 213:>             (2 + 10) / 343]
+[Stage 212:========>   (245 + 98) / 343][Stage 213:>             (3 + 10) / 343]
+[Stage 212:========>   (246 + 97) / 343][Stage 213:>             (3 + 11) / 343]
+[Stage 212:========>   (246 + 97) / 343][Stage 213:>             (4 + 11) / 343]
+[Stage 212:========>   (248 + 95) / 343][Stage 213:>             (4 + 13) / 343]
+[Stage 212:========>   (251 + 92) / 343][Stage 213:>             (4 + 16) / 343]
+[Stage 212:========>   (252 + 91) / 343][Stage 213:>             (4 + 17) / 343]
+[Stage 212:========>   (252 + 91) / 343][Stage 213:>             (6 + 17) / 343]
+[Stage 212:========>   (254 + 89) / 343][Stage 213:>             (6 + 19) / 343]
+[Stage 212:========>   (257 + 86) / 343][Stage 213:>             (7 + 22) / 343]
+[Stage 212:========>   (257 + 86) / 343][Stage 213:>             (9 + 22) / 343]
+[Stage 212:========>   (257 + 86) / 343][Stage 213:>            (14 + 22) / 343]
+[Stage 212:========>   (257 + 86) / 343][Stage 213:>            (15 + 22) / 343]
+[Stage 212:=========>  (258 + 85) / 343][Stage 213:>            (15 + 23) / 343]
+[Stage 212:=========>  (259 + 84) / 343][Stage 213:>            (15 + 24) / 343]
+[Stage 212:=========>  (259 + 84) / 343][Stage 213:>            (16 + 24) / 343]
+[Stage 212:=========>  (261 + 82) / 343][Stage 213:>            (17 + 26) / 343]
+[Stage 212:=========>  (265 + 78) / 343][Stage 213:>            (18 + 30) / 343]
+[Stage 212:=========>  (266 + 77) / 343][Stage 213:>            (18 + 31) / 343]
+[Stage 212:=========>  (267 + 76) / 343][Stage 213:>            (18 + 32) / 343]
+[Stage 212:=========>  (267 + 76) / 343][Stage 213:>            (19 + 32) / 343]
+[Stage 212:=========>  (267 + 76) / 343][Stage 213:=>           (29 + 32) / 343]
+[Stage 212:=========>  (272 + 71) / 343][Stage 213:=>           (31 + 37) / 343]
+[Stage 212:=========>  (273 + 70) / 343][Stage 213:=>           (31 + 38) / 343]
+[Stage 212:=========>  (273 + 70) / 343][Stage 213:=>           (32 + 38) / 343]
+[Stage 212:=========>  (273 + 70) / 343][Stage 213:==>          (53 + 38) / 343]
+[Stage 212:=========>  (274 + 69) / 343][Stage 213:==>          (64 + 39) / 343]
+[Stage 212:=========>  (276 + 67) / 343][Stage 213:==>          (69 + 41) / 343]
+[Stage 212:=========>  (276 + 67) / 343][Stage 213:==>          (70 + 41) / 343]
+[Stage 212:=========>  (277 + 66) / 343][Stage 213:==>          (70 + 42) / 343]
+[Stage 212:=========>  (278 + 65) / 343][Stage 213:==>          (70 + 43) / 343]
+[Stage 212:=========>  (278 + 65) / 343][Stage 213:==>          (72 + 43) / 343]
+[Stage 212:=========>  (278 + 65) / 343][Stage 213:==>          (76 + 43) / 343]
+[Stage 212:=========>  (279 + 64) / 343][Stage 213:==>          (76 + 44) / 343]
+[Stage 212:=========>  (280 + 63) / 343][Stage 213:==>          (76 + 45) / 343]
+[Stage 212:=========>  (281 + 62) / 343][Stage 213:===>         (92 + 46) / 343]
+[Stage 212:=========>  (281 + 62) / 343][Stage 213:====>       (115 + 46) / 343]
+[Stage 212:=========>  (284 + 59) / 343][Stage 213:====>       (122 + 49) / 343]
+[Stage 212:==========> (288 + 55) / 343][Stage 213:====>       (129 + 53) / 343]
+[Stage 212:==========> (290 + 53) / 343][Stage 213:====>       (131 + 55) / 343]
+[Stage 212:==========> (290 + 53) / 343][Stage 213:=====>      (143 + 55) / 343]
+[Stage 212:==========> (291 + 52) / 343][Stage 213:=====>      (143 + 56) / 343]
+[Stage 212:==========> (292 + 51) / 343][Stage 213:=====>      (143 + 57) / 343]
+[Stage 212:==========> (293 + 50) / 343][Stage 213:=====>      (147 + 58) / 343]
+[Stage 212:==========> (293 + 50) / 343][Stage 213:=====>      (152 + 58) / 343]
+[Stage 212:==========> (295 + 48) / 343][Stage 213:=====>      (152 + 60) / 343]
+[Stage 212:==========> (295 + 48) / 343][Stage 213:=====>      (153 + 60) / 343]
+[Stage 212:==========> (295 + 48) / 343][Stage 213:=====>      (154 + 60) / 343]
+[Stage 212:==========> (295 + 48) / 343][Stage 213:=====>      (156 + 60) / 343]
+[Stage 212:==========> (295 + 48) / 343][Stage 213:=====>      (157 + 60) / 343]
+[Stage 212:==========> (296 + 47) / 343][Stage 213:=====>      (157 + 61) / 343]
+[Stage 212:==========> (296 + 47) / 343][Stage 213:=====>      (158 + 61) / 343]
+[Stage 212:==========> (298 + 45) / 343][Stage 213:=====>      (158 + 63) / 343]
+[Stage 212:==========> (298 + 45) / 343][Stage 213:=====>      (159 + 63) / 343]
+[Stage 212:==========> (298 + 45) / 343][Stage 213:=====>      (169 + 63) / 343]
+[Stage 212:==========> (299 + 44) / 343][Stage 213:=====>      (170 + 64) / 343]
+[Stage 212:==========> (300 + 43) / 343][Stage 213:=====>      (170 + 65) / 343]
+[Stage 212:==========> (300 + 43) / 343][Stage 213:======>     (172 + 65) / 343]
+[Stage 212:==========> (300 + 43) / 343][Stage 213:======>     (176 + 65) / 343]
+[Stage 212:==========> (301 + 42) / 343][Stage 213:======>     (176 + 66) / 343]
+[Stage 212:==========> (302 + 41) / 343][Stage 213:======>     (176 + 67) / 343]
+[Stage 212:==========> (302 + 41) / 343][Stage 213:======>     (182 + 67) / 343]
+[Stage 212:==========> (302 + 41) / 343][Stage 213:======>     (183 + 67) / 343]
+[Stage 212:==========> (303 + 40) / 343][Stage 213:======>     (183 + 68) / 343]
+[Stage 212:==========> (303 + 40) / 343][Stage 213:======>     (185 + 68) / 343]
+[Stage 212:==========> (305 + 38) / 343][Stage 213:======>     (185 + 70) / 343]
+[Stage 212:==========> (305 + 38) / 343][Stage 213:======>     (186 + 70) / 343]
+[Stage 212:==========> (305 + 38) / 343][Stage 213:======>     (187 + 70) / 343]
+[Stage 212:==========> (306 + 37) / 343][Stage 213:======>     (187 + 71) / 343]
+[Stage 212:==========> (306 + 37) / 343][Stage 213:======>     (188 + 71) / 343]
+[Stage 212:==========> (306 + 37) / 343][Stage 213:======>     (197 + 71) / 343]
+[Stage 212:==========> (307 + 36) / 343][Stage 213:======>     (197 + 72) / 343]
+[Stage 212:==========> (309 + 34) / 343][Stage 213:======>     (197 + 74) / 343]
+[Stage 212:==========> (309 + 34) / 343][Stage 213:======>     (198 + 74) / 343]
+[Stage 212:==========> (310 + 33) / 343][Stage 213:======>     (198 + 75) / 343]
+[Stage 212:==========> (310 + 33) / 343][Stage 213:=======>    (201 + 75) / 343]
+[Stage 212:==========> (312 + 31) / 343][Stage 213:=======>    (204 + 77) / 343]
+[Stage 212:==========> (313 + 30) / 343][Stage 213:=======>    (205 + 78) / 343]
+[Stage 212:==========> (314 + 29) / 343][Stage 213:=======>    (208 + 79) / 343]
+[Stage 212:===========>(318 + 25) / 343][Stage 213:=======>    (213 + 83) / 343]
+[Stage 212:===========>(319 + 24) / 343][Stage 213:=======>    (220 + 84) / 343]
+[Stage 212:===========>(319 + 24) / 343][Stage 213:=======>    (221 + 84) / 343]
+[Stage 212:===========>(320 + 23) / 343][Stage 213:=======>    (221 + 85) / 343]
+[Stage 212:===========>(320 + 23) / 343][Stage 213:========>   (239 + 85) / 343]
+[Stage 212:===========>(320 + 23) / 343][Stage 213:========>   (252 + 85) / 343]
+[Stage 212:===========>(324 + 19) / 343][Stage 213:=========>  (258 + 85) / 343]
+[Stage 212:===========>(326 + 17) / 343][Stage 213:=========>  (260 + 83) / 343]
+[Stage 212:===========>(326 + 17) / 343][Stage 213:=========>  (261 + 82) / 343]
+[Stage 212:===========>(327 + 16) / 343][Stage 213:=========>  (263 + 80) / 343]
+[Stage 212:===========>(328 + 15) / 343][Stage 213:=========>  (272 + 71) / 343]
+[Stage 212:===========>(330 + 13) / 343][Stage 213:=========>  (272 + 71) / 343]
+[Stage 212:===========>(330 + 13) / 343][Stage 213:==========> (296 + 47) / 343]
+[Stage 212:===========>(330 + 13) / 343][Stage 213:===========>(325 + 18) / 343]
+[Stage 212:===========>(331 + 12) / 343][Stage 213:===========>(333 + 10) / 343]
+[Stage 212:===========>(333 + 10) / 343][Stage 213:===========>(333 + 10) / 343]
+[Stage 212:============>(334 + 9) / 343][Stage 213:===========>(333 + 10) / 343]
+[Stage 212:============>(336 + 7) / 343][Stage 213:===========>(333 + 10) / 343]
+[Stage 212:============>(337 + 6) / 343][Stage 213:===========>(333 + 10) / 343]
+[Stage 212:============>(337 + 6) / 343][Stage 213:============>(341 + 2) / 343]
+[Stage 212:============>(337 + 6) / 343][Stage 213:============>(342 + 1) / 343]
+[Stage 212:============>(338 + 5) / 343][Stage 213:============>(342 + 1) / 343]
+[Stage 212:============>(339 + 4) / 343][Stage 213:============>(342 + 1) / 343]
+[Stage 212:============>(340 + 3) / 343][Stage 213:============>(342 + 1) / 343]
+[Stage 212:============>(341 + 2) / 343][Stage 213:============>(342 + 1) / 343]
+[Stage 212:====================================================>(341 + 2) / 343]
+
+16/11/03 16:51:27 WARN RowMatrix: The input data is not directly cached, which may hurt performance if its parent RDDs are also uncached.
+
+[Stage 218:============================>                      (192 + 108) / 343]
+[Stage 218:===============================================>    (315 + 28) / 343]
+[Stage 218:================================================>   (320 + 23) / 343]
+[Stage 218:=================================================>  (324 + 19) / 343]
+[Stage 218:=================================================>  (327 + 16) / 343]
+[Stage 218:==================================================> (330 + 13) / 343]
+[Stage 218:==================================================> (331 + 12) / 343]
+[Stage 218:==================================================> (332 + 11) / 343]
+[Stage 218:==================================================> (333 + 10) / 343]
+[Stage 218:===================================================> (335 + 8) / 343]
+[Stage 218:====================================================>(339 + 4) / 343]
+
+
+[Stage 238:====================================================>(341 + 2) / 343]
+[Stage 238:====================================================>(342 + 1) / 343]
+
+
+[Stage 243:====================================================>(341 + 2) / 343]
+
+
+[Stage 248:====================================================>(339 + 4) / 343]
+[Stage 248:====================================================>(340 + 3) / 343]
+[Stage 248:====================================================>(341 + 2) / 343]
+
+
+[Stage 253:===================================================> (331 + 5) / 343]
+
+
+[Stage 258:====================================================>(340 + 3) / 343]
+[Stage 258:====================================================>(341 + 2) / 343]
+[Stage 258:====================================================>(342 + 1) / 343]
+
+
+[Stage 263:====================================================>(342 + 1) / 343]
+
+
+[Stage 268:====================================================>(339 + 4) / 343]
+[Stage 268:====================================================>(342 + 1) / 343]
+[Stage 269:>                                                       (0 + 0) / 18]
+
+
+[Stage 273:====================================================>(339 + 4) / 343]
+[Stage 273:====================================================>(341 + 2) / 343]
+[Stage 273:====================================================>(342 + 1) / 343]
+
+
+[Stage 278:====================================================>(341 + 2) / 343]
+[Stage 278:====================================================>(342 + 1) / 343]
+
+
+[Stage 293:====================================================>(342 + 1) / 343]
+
+
+[Stage 298:====================================================>(341 + 2) / 343]
+[Stage 298:====================================================>(342 + 1) / 343]
+[Stage 299:===================================================>   (17 + 1) / 18]
+
+
+[Stage 303:====================================================>(342 + 1) / 343]
+[Stage 304:===================================================>   (17 + 1) / 18]
+
+
+[Stage 339:>                                                       (0 + 0) / 18]
+
+
+[Stage 348:====================================================>(342 + 1) / 343]
+
+
+[Stage 428:==================================================>  (329 + 4) / 343]
+
+
+[Stage 563:=================================================>   (323 + 8) / 343]
+[Stage 563:===================================================> (335 + 4) / 343]
+
+16/11/03 16:53:22 WARN RowMatrix: The input data was not directly cached, which may hurt performance if its parent RDDs are also uncached.
+findmeee1
+findmeeeThu Nov 03 16:53:22 EDT 2016
+
+[Stage 568:>                                                    (4 + 108) / 343]
+[Stage 568:==>         (60 + 108) / 343][Stage 569:>              (0 + 0) / 343]
+[Stage 568:==>         (75 + 108) / 343][Stage 569:>              (0 + 0) / 343]
+[Stage 568:====>      (133 + 108) / 343][Stage 569:>              (0 + 0) / 343]
+[Stage 568:=====>     (158 + 108) / 343][Stage 569:>              (0 + 0) / 343]
+[Stage 568:======>    (190 + 108) / 343][Stage 569:>              (0 + 0) / 343]
+[Stage 568:=======>   (242 + 101) / 343][Stage 569:>              (0 + 7) / 343]
+[Stage 568:=========>  (266 + 77) / 343][Stage 569:>             (0 + 32) / 343]
+[Stage 568:==========> (295 + 48) / 343][Stage 569:>             (0 + 60) / 343]
+[Stage 568:==========> (312 + 31) / 343][Stage 569:>             (0 + 77) / 343]
+[Stage 568:===========>(317 + 26) / 343][Stage 569:>             (0 + 82) / 343]
+[Stage 568:===========>(317 + 26) / 343][Stage 569:>             (1 + 82) / 343]
+[Stage 568:===========>(321 + 22) / 343][Stage 569:>             (2 + 86) / 343]
+[Stage 568:===========>(324 + 19) / 343][Stage 569:>             (2 + 89) / 343]
+[Stage 568:===========>(324 + 19) / 343][Stage 569:>             (4 + 89) / 343]
+[Stage 568:===========>(324 + 19) / 343][Stage 569:>             (5 + 89) / 343]
+[Stage 568:===========>(324 + 19) / 343][Stage 569:>             (9 + 89) / 343]
+[Stage 568:===========>(324 + 19) / 343][Stage 569:>            (11 + 89) / 343]
+[Stage 568:===========>(324 + 19) / 343][Stage 569:>            (18 + 89) / 343]
+[Stage 568:===========>(324 + 19) / 343][Stage 569:>            (19 + 89) / 343]
+[Stage 568:===========>(326 + 17) / 343][Stage 569:=>           (28 + 91) / 343]
+[Stage 568:===========>(326 + 17) / 343][Stage 569:=>           (32 + 91) / 343]
+[Stage 568:===========>(326 + 17) / 343][Stage 569:=>           (36 + 91) / 343]
+[Stage 568:===========>(326 + 17) / 343][Stage 569:=>           (37 + 91) / 343]
+[Stage 568:===========>(328 + 15) / 343][Stage 569:=>           (52 + 93) / 343]
+[Stage 568:===========>(328 + 15) / 343][Stage 569:==>          (54 + 93) / 343]
+[Stage 568:===========>(330 + 13) / 343][Stage 569:==>          (54 + 95) / 343]
+[Stage 568:===========>(330 + 13) / 343][Stage 569:==>          (55 + 95) / 343]
+[Stage 568:===========>(330 + 13) / 343][Stage 569:==>          (57 + 95) / 343]
+[Stage 568:===========>(330 + 13) / 343][Stage 569:==>          (58 + 95) / 343]
+[Stage 568:===========>(330 + 13) / 343][Stage 569:==>          (59 + 95) / 343]
+[Stage 568:===========>(331 + 12) / 343][Stage 569:==>          (59 + 96) / 343]
+[Stage 568:===========>(333 + 10) / 343][Stage 569:==>          (59 + 98) / 343]
+[Stage 568:===========>(333 + 10) / 343][Stage 569:==>          (60 + 98) / 343]
+[Stage 568:===========>(333 + 10) / 343][Stage 569:==>          (61 + 98) / 343]
+[Stage 568:===========>(333 + 10) / 343][Stage 569:==>          (63 + 98) / 343]
+[Stage 568:===========>(333 + 10) / 343][Stage 569:==>          (64 + 98) / 343]
+[Stage 568:===========>(333 + 10) / 343][Stage 569:==>          (65 + 98) / 343]
+[Stage 568:===========>(333 + 10) / 343][Stage 569:==>          (66 + 98) / 343]
+[Stage 568:===========>(333 + 10) / 343][Stage 569:==>          (68 + 98) / 343]
+[Stage 568:===========>(333 + 10) / 343][Stage 569:==>          (74 + 98) / 343]
+[Stage 568:===========>(333 + 10) / 343][Stage 569:==>          (75 + 98) / 343]
+[Stage 568:===========>(333 + 10) / 343][Stage 569:==>          (77 + 98) / 343]
+[Stage 568:===========>(333 + 10) / 343][Stage 569:==>          (78 + 98) / 343]
+[Stage 568:===========>(333 + 10) / 343][Stage 569:===>         (98 + 98) / 343]
+[Stage 568:===========>(333 + 10) / 343][Stage 569:===>         (99 + 98) / 343]
+[Stage 568:===========>(333 + 10) / 343][Stage 569:====>       (117 + 98) / 343]
+[Stage 568:============>(334 + 9) / 343][Stage 569:====>      (131 + 100) / 343]
+[Stage 568:============>(334 + 9) / 343][Stage 569:=====>      (144 + 99) / 343]
+[Stage 568:============>(334 + 9) / 343][Stage 569:=====>      (159 + 99) / 343]
+[Stage 568:============>(334 + 9) / 343][Stage 569:=====>      (171 + 99) / 343]
+[Stage 568:============>(334 + 9) / 343][Stage 569:======>     (180 + 99) / 343]
+[Stage 568:============>(335 + 8) / 343][Stage 569:======>    (194 + 101) / 343]
+[Stage 568:============>(335 + 8) / 343][Stage 569:=======>   (222 + 101) / 343]
+[Stage 568:============>(335 + 8) / 343][Stage 569:=======>   (243 + 100) / 343]
+[Stage 568:============>(335 + 8) / 343][Stage 569:========>   (256 + 87) / 343]
+[Stage 568:============>(335 + 8) / 343][Stage 569:=========>  (273 + 70) / 343]
+[Stage 568:============>(335 + 8) / 343][Stage 569:=========>  (274 + 69) / 343]
+[Stage 568:============>(335 + 8) / 343][Stage 569:=========>  (282 + 61) / 343]
+[Stage 568:============>(335 + 8) / 343][Stage 569:==========> (286 + 57) / 343]
+[Stage 568:============>(335 + 8) / 343][Stage 569:==========> (292 + 51) / 343]
+[Stage 568:============>(335 + 8) / 343][Stage 569:==========> (305 + 38) / 343]
+[Stage 568:============>(335 + 8) / 343][Stage 569:==========> (310 + 33) / 343]
+[Stage 568:============>(335 + 8) / 343][Stage 569:===========>(317 + 26) / 343]
+[Stage 568:============>(335 + 8) / 343][Stage 569:===========>(323 + 20) / 343]
+[Stage 568:============>(335 + 8) / 343][Stage 569:===========>(327 + 16) / 343]
+[Stage 568:============>(335 + 8) / 343][Stage 569:===========>(328 + 15) / 343]
+[Stage 568:============>(335 + 8) / 343][Stage 569:============>(334 + 9) / 343]
+[Stage 568:============>(337 + 6) / 343][Stage 569:============>(334 + 9) / 343]
+[Stage 568:============>(338 + 5) / 343][Stage 569:============>(334 + 9) / 343]
+[Stage 568:============>(338 + 5) / 343][Stage 569:============>(338 + 5) / 343]
+[Stage 568:============>(339 + 4) / 343][Stage 569:============>(338 + 5) / 343]
+[Stage 568:============>(339 + 4) / 343][Stage 569:============>(340 + 3) / 343]
+[Stage 568:============>(339 + 4) / 343][Stage 569:============>(341 + 2) / 343]
+[Stage 568:============>(341 + 2) / 343][Stage 569:============>(341 + 2) / 343]
+[Stage 568:============>(341 + 2) / 343][Stage 569:============>(342 + 1) / 343]
+[Stage 568:============>(342 + 1) / 343][Stage 569:============>(342 + 1) / 343]
+
+16/11/03 16:54:10 WARN RowMatrix: The input data is not directly cached, which may hurt performance if its parent RDDs are also uncached.
+
+[Stage 576:====================================================>(341 + 2) / 343]
+[Stage 576:====================================================>(342 + 1) / 343]
+
+
+[Stage 583:===================================================> (334 + 8) / 343]
+[Stage 583:===================================================> (336 + 7) / 343]
+[Stage 583:====================================================>(338 + 5) / 343]
+[Stage 583:====================================================>(342 + 1) / 343]
+
+
+[Stage 590:====================================================>(339 + 4) / 343]
+
+
+[Stage 639:====================================================>(338 + 5) / 343]
+[Stage 639:====================================================>(342 + 1) / 343]
+
+
+[Stage 675:================================================>      (16 + 2) / 18]
+
+
+[Stage 821:====================================================>(341 + 2) / 343]
+
+16/11/03 16:54:51 WARN RowMatrix: The input data was not directly cached, which may hurt performance if its parent RDDs are also uncached.
+findmeee2
+findmeeeThu Nov 03 16:54:51 EDT 2016
+
+[Stage 1066:=>         (54 + 108) / 343][Stage 1067:>             (0 + 0) / 343]
+[Stage 1066:==>        (89 + 108) / 343][Stage 1067:>             (0 + 0) / 343]
+[Stage 1066:===>      (132 + 108) / 343][Stage 1067:>             (0 + 0) / 343]
+[Stage 1066:====>     (158 + 108) / 343][Stage 1067:>             (0 + 0) / 343]
+[Stage 1066:=====>    (189 + 108) / 343][Stage 1067:>             (0 + 0) / 343]
+[Stage 1066:======>   (239 + 104) / 343][Stage 1067:>             (0 + 4) / 343]
+[Stage 1066:========>  (266 + 77) / 343][Stage 1067:>            (0 + 31) / 343]
+[Stage 1066:=========> (300 + 43) / 343][Stage 1067:>            (0 + 65) / 343]
+[Stage 1066:==========>(328 + 15) / 343][Stage 1067:>            (0 + 93) / 343]
+[Stage 1066:===========>(334 + 9) / 343][Stage 1067:>            (0 + 99) / 343]
+[Stage 1066:===========>(339 + 4) / 343][Stage 1067:>           (0 + 104) / 343]
+[Stage 1066:===========>(339 + 4) / 343][Stage 1067:>           (1 + 104) / 343]
+[Stage 1066:===========>(339 + 4) / 343][Stage 1067:>           (4 + 104) / 343]
+[Stage 1066:===========>(341 + 2) / 343][Stage 1067:>           (6 + 106) / 343]
+[Stage 1066:===========>(341 + 2) / 343][Stage 1067:>          (10 + 106) / 343]
+[Stage 1066:===========>(341 + 2) / 343][Stage 1067:>          (21 + 106) / 343]
+[Stage 1066:===========>(341 + 2) / 343][Stage 1067:>          (23 + 106) / 343]
+[Stage 1066:===========>(341 + 2) / 343][Stage 1067:==>        (64 + 106) / 343]
+[Stage 1066:===========>(342 + 1) / 343][Stage 1067:===>      (126 + 108) / 343]
+[Stage 1066:===========>(342 + 1) / 343][Stage 1067:====>     (154 + 107) / 343]
+[Stage 1066:===========>(342 + 1) / 343][Stage 1067:=====>    (194 + 107) / 343]
+[Stage 1067:=================================>                (227 + 108) / 343]
+[Stage 1067:======================================>            (258 + 85) / 343]
+[Stage 1067:=========================================>         (278 + 65) / 343]
+[Stage 1067:===========================================>       (295 + 48) / 343]
+
+16/11/03 16:54:58 WARN RowMatrix: The input data is not directly cached, which may hurt performance if its parent RDDs are also uncached.
+
+[Stage 1076:===================================================>(339 + 4) / 343]
+
+
+[Stage 1112:==============================================>    (311 + 15) / 343]
+[Stage 1112:==================================================> (333 + 7) / 343]
+
+
+[Stage 1238:===================================================>(342 + 1) / 343]
+
+
+[Stage 1283:=================================================>  (327 + 4) / 343]
+[Stage 1284:>                                                      (0 + 0) / 18]
+
+
+[Stage 1292:===================================================>(342 + 1) / 343]
+
+
+[Stage 1472:===========================================>       (294 + 24) / 343]
+[Stage 1472:===============================================>   (317 + 12) / 343]
+[Stage 1472:===================================================>(338 + 4) / 343]
+
+16/11/03 16:55:36 WARN RowMatrix: The input data was not directly cached, which may hurt performance if its parent RDDs are also uncached.
+findmeee Final Missing start
+findmeeeThu Nov 03 16:55:37 EDT 2016
+
+[Stage 1706:====>                                              (30 + 108) / 343]
+[Stage 1706:============>                                      (81 + 109) / 343]
+[Stage 1706:===============>                                  (109 + 109) / 343]
+[Stage 1706:======================>                           (152 + 108) / 343]
+[Stage 1706:===========================>                      (192 + 108) / 343]
+[Stage 1706:==================================>               (236 + 107) / 343]
+[Stage 1706:========================================>          (273 + 70) / 343]
+[Stage 1706:==============================================>    (311 + 32) / 343]
+[Stage 1706:==============================================>    (313 + 30) / 343]
+[Stage 1706:==============================================>    (316 + 27) / 343]
+[Stage 1706:===============================================>   (322 + 21) / 343]
+[Stage 1706:================================================>  (323 + 20) / 343]
+[Stage 1706:================================================>  (329 + 14) / 343]
+[Stage 1706:==================================================> (334 + 9) / 343]
+[Stage 1706:===================================================>(339 + 4) / 343]
+
+findmeee Final Missing end
+findmeeeThu Nov 03 16:55:40 EDT 2016
+findmeee outputting
+findmeeeThu Nov 03 16:55:40 EDT 2016
+
+[Stage 1707:>               (0 + 2) / 2][Stage 1715:>           (0 + 106) / 343]
+[Stage 1707:========>       (1 + 1) / 2][Stage 1715:>           (2 + 107) / 343]
+[Stage 1715:====>                                              (28 + 108) / 343]
+[Stage 1715:========>                                          (54 + 108) / 343]
+[Stage 1715:=========>                                         (66 + 108) / 343]
+[Stage 1715:=============>                                     (90 + 108) / 343]
+[Stage 1715:================>                                 (116 + 108) / 343]
+[Stage 1715:====================>                             (141 + 109) / 343]
+[Stage 1715:======================>                           (157 + 108) / 343]
+[Stage 1715:========================>                         (167 + 108) / 343]
+[Stage 1715:===========================>                      (189 + 108) / 343]
+[Stage 1715:==============================>                   (211 + 108) / 343]
+[Stage 1715:==================================>               (234 + 108) / 343]
+[Stage 1715:=====================================>             (251 + 92) / 343]
+[Stage 1715:========================================>          (273 + 70) / 343]
+[Stage 1715:============================================>      (296 + 47) / 343]
+[Stage 1715:==============================================>    (314 + 29) / 343]
+[Stage 1715:================================================>  (324 + 19) / 343]
+[Stage 1715:=================================================> (331 + 12) / 343]
+[Stage 1715:==================================================> (335 + 8) / 343]
+[Stage 1715:===================================================>(337 + 6) / 343]
+[Stage 1715:===================================================>(342 + 1) / 343]
+[Stage 1716:=>                                                 (10 + 109) / 343]
+[Stage 1716:======>                                            (41 + 109) / 343]
+[Stage 1716:========>                                          (60 + 108) / 343]
+[Stage 1716:============>                                      (83 + 108) / 343]
+[Stage 1716:==============>                                    (95 + 108) / 343]
+[Stage 1716:==============>                                   (100 + 108) / 343]
+[Stage 1716:===================>                              (132 + 109) / 343]
+[Stage 1716:========================>                         (166 + 108) / 343]
+[Stage 1716:=========================>                        (176 + 108) / 343]
+[Stage 1716:==========================>                       (182 + 108) / 343]
+[Stage 1716:==========================>                       (183 + 108) / 343]
+[Stage 1716:==============================>                   (212 + 110) / 343]
+[Stage 1716:================================>                 (226 + 108) / 343]
+[Stage 1716:=================================>                (228 + 108) / 343]
+[Stage 1716:==================================>               (236 + 107) / 343]
+[Stage 1716:======================================>            (259 + 84) / 343]
+[Stage 1716:======================================>            (262 + 81) / 343]
+[Stage 1716:=======================================>           (264 + 79) / 343]
+[Stage 1716:========================================>          (272 + 71) / 343]
+[Stage 1716:========================================>          (275 + 68) / 343]
+[Stage 1716:===================================================>(339 + 4) / 343]
 
 findmeee end code
-16/11/03 13:32:53 ERROR LiveListenerBus: SparkListenerBus has already stopped! Dropping event SparkListenerExecutorMetricsUpdate(22,WrappedArray())

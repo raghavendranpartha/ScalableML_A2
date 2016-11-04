@@ -61,7 +61,7 @@ object Assign2 {
         //val cmat = new CoordinateMatrix(sc.parallelize(Source.fromFile(datafile).getLines().map(line => line.split(",")).toList.map(x => MatrixEntry(x(0).toLong,x(1).toLong,x(2).toDouble))))
 
         println("findmeee start code")
-        println("filename "+datafile)
+        println("findmeee filename "+datafile)
         //val dat = sc.textFile(datafile).map(line => line.split(",")).map(x => MatrixEntry(x(0).toLong,x(1).toLong,x(2).toDouble))                
         //val dat = sc.textFile(datafile).map(line => line.split(",")).map(x => (x(0).toInt,x(1).toInt,x(2).toDouble))
         val dat2 = sc.textFile(datafile).mapPartitions(iter => {
@@ -92,10 +92,33 @@ object Assign2 {
 
         println("findmeee svd run 1 start")
         println("findmeee"+Calendar.getInstance.getTime())
-        var svd: SingularValueDecomposition[IndexedRowMatrix, Matrix] = rmat.computeSVD(20, computeU = true)
+        
+        val ksvd = {
+            if(datafile == "hdfs://noc-n063.csb.pitt.edu:9000/large.csv"){                
+                25
+            } else if(datafile == "hdfs://noc-n063.csb.pitt.edu:9000/medium.csv"){
+                159
+            }else{
+                24
+            }
+        }
+        val numIterations = {
+            if(datafile == "hdfs://noc-n063.csb.pitt.edu:9000/large.csv"){                
+                3
+            } else if(datafile == "hdfs://noc-n063.csb.pitt.edu:9000/medium.csv"){
+                6
+            }else{
+                10
+            }
+        }   
+
+        println("findmeee ksvd "+ksvd)
+        println("findmeee numIterations "+numIterations)
+
+        var svd: SingularValueDecomposition[IndexedRowMatrix, org.apache.spark.mllib.linalg.Matrix] = rmat.computeSVD(ksvd, computeU = true)
         var U: IndexedRowMatrix = svd.U
-        var smat: Matrix = Matrices.diag(svd.s)
-        var V: Matrix = svd.V
+        var smat: org.apache.spark.mllib.linalg.Matrix = Matrices.diag(svd.s)
+        var V: org.apache.spark.mllib.linalg.Matrix = svd.V
         println("findmeee svd run 1 end")
         println("findmeee"+Calendar.getInstance.getTime())
         rmat.rows.unpersist()    
@@ -107,33 +130,53 @@ object Assign2 {
 
         var iter = 0
         //val numIterations = 10    
-        val numIterations = {
-            if(datafile == "hdfs://noc-n063.csb.pitt.edu:9000/large.csv"){                
-                3
-            } else if(datafile == "hdfs://noc-n063.csb.pitt.edu:9000/medium.csv"){
-                6
-            }else{
-                10
-            }
-        }   
+        
+
+        var lsqerr = 0.0
+        var lsqerrbr = sc.broadcast(lsqerr)
               
 
         while(iter < numIterations){
             println("findmeee"+iter)
             println("findmeee"+Calendar.getInstance.getTime())
+            lsqerr = 0.0
 
+            /*
             var recmatrows = newmat.rows.map(r => r.index -> r.vector).join(rmat.rows.map(x => x.index -> x.vector)).mapPartitions(iter => {
                 var res = collection.mutable.ArrayBuffer.empty[IndexedRow]
                 iter.foreach(entry => {
                     var v1 = breeze.linalg.DenseVector(entry._2._1.toArray)
                     var v2 = breeze.linalg.DenseVector(entry._2._2.toArray)                
                     res += IndexedRow(entry._1, Vectors.dense((v1:*(-I(v2)):+v1+v2).toArray))
+                    var diff = v1:*(-I(v2)):+v2
+                    lsqerr += sum(diff:*diff)
                     })
                 res.iterator
-            }).cache()
+            }).cache()*/
+
+            var recmatrowslsqerr = newmat.rows.map(r => r.index -> r.vector).join(rmat.rows.map(x => x.index -> x.vector)).mapPartitions(iter => {
+                var res2 = collection.mutable.ArrayBuffer.empty[(Double,Array[IndexedRow])]
+                var res = collection.mutable.ArrayBuffer.empty[IndexedRow]
+                iter.foreach(entry => {
+                    var v1 = breeze.linalg.DenseVector(entry._2._1.toArray)
+                    var v2 = breeze.linalg.DenseVector(entry._2._2.toArray)                
+                    res += IndexedRow(entry._1, Vectors.dense((v1:*(-I(v2)):+v1+v2).toArray))
+                    var diff = v1:*(-I(v2)):+v2
+                    lsqerr += sum(diff:*diff)                    
+                    })
+                res2 += ((lsqerr,res.toArray))
+                res2.iterator
+            })
+
+            var recmatrows = recmatrowslsqerr.flatMap(r => r._2).cache()
+            lsqerr = recmatrowslsqerr.map(r => r._1).collect.sum
+            if(lsqerr < 0.01){
+                iter=100
+            }
+            println("findmeee lsqerr"+lsqerr)
 
             var recmat = new IndexedRowMatrix(recmatrows)
-            svd = recmat.computeSVD(20, computeU = true)
+            svd = recmat.computeSVD(ksvd, computeU = true)
             U = svd.U
             smat = Matrices.diag(svd.s)
             V = svd.V             
