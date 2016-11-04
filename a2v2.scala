@@ -76,7 +76,7 @@ object Assign2 {
                 res +=  (MatrixEntry(tmp(0).toInt,tmp(1).toInt,tmp(2).toDouble))
                 })
             res.iterator
-            })
+            }).cache()
         if(datafile.endsWith("small.csv")){
             dat2.coalesce(10)
         }
@@ -84,17 +84,19 @@ object Assign2 {
         //var fullcmat = new CoordinateMatrix(fulldat.map(x => MatrixEntry(x._1,x._2,x._3)))
         //var fullrowmat =  fullcmat.toRowMatrix
         //dat.cache()
-        
+
         println("findmeee convert to coordinate matrix")
         println("findmeee"+Calendar.getInstance.getTime())
         //var cmat = new CoordinateMatrix(dat2.map(x => MatrixEntry(x._1,x._2,x._3)))      
         var cmat = new CoordinateMatrix(dat2)      
         println("findmeee"+Calendar.getInstance.getTime())
+        val numEntries = dat2.count().toDouble
 
         println("findmeee convert to indexed row matrix")
         println("findmeee"+Calendar.getInstance.getTime())
         var rmat = cmat.toIndexedRowMatrix()        
         println("findmeee"+Calendar.getInstance.getTime())
+        dat2.unpersist()
         rmat.rows.cache()
 
         println("findmeee svd run 1 start")
@@ -102,11 +104,11 @@ object Assign2 {
         
         var ksvd = {
             if(datafile.endsWith("large.csv")){                
-                5
+                25
             } else if(datafile.endsWith("medium.csv")){
-                20
+                15
             }else{
-                10
+                5
             }
         }
         //ksvd = 20
@@ -116,7 +118,7 @@ object Assign2 {
             } else if(datafile.endsWith("medium.csv")){
                 15
             }else{
-                60
+                50
             }            
         }   
 
@@ -174,7 +176,7 @@ object Assign2 {
                     var diff = v1:*(-I(v2)):+v2
                     lsqerr += sum(diff:*diff)                    
                     })
-                res2 += ((lsqerr,res.toArray))
+                res2 += ((lsqerr/numEntries,res.toArray))
                 res2.iterator
             })
             newmat.rows.unpersist()

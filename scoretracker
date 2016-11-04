@@ -13,7 +13,15 @@ scores = 17.75, 12.46, 0.4707
 times = 160, 187, 311
 scores = 18.6, 4.6, 0.47
 
-1104602 submit ksvd = 10,30,25 num Iters = convergence, 60,10,3 max
+1104602 submit ksvd = 10,30,25 num Iters = convergence, 60,15,5 max
 times = 157, 254, 542
 scores = 16.9, 4.4, 0.47
 
+1104641 submit ksvd = 10,20,5 num Iters = convergence, 60,15,3 max
+times = 157, 223, 177
+scores = 19.7, 2.1, 0.63
+
+
+1104641 submit ksvd = 5,15,25 num Iters = convergence, 50,15,3 max
+times = 157, 223, 177
+scores = 19.7, 2.1, 0.63
