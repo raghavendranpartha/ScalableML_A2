@@ -49,10 +49,14 @@ object Assign2 {
             iter.foreach(entry => {
                 //println(entry)
                 var tmp = entry.split(",")
-                res +=  (((tmp(0).toLong,tmp(1).toLong),0.0))
+                res +=  (((tmp(0).toLong,tmp(1).toLong),1.0))
                 })
             res.iterator
             }).cache()
+
+        val missingindsdummy2AsCoords = missingindsdummy2.map(r => MatrixEntry(r._1._1,r._1._2,r._2))
+        val cmatmissingindsdummy2AsCoords = new CoordinateMatrix(missingindsdummy2AsCoords)
+        val irmatmissingindsdummy2AsCoords = cmatmissingindsdummy2AsCoords.toIndexedRowMatrix().rows.map(x => x.index -> x.vector).cache()
 
         //val md2 = sc.broadcast(missingindsdummy2)
         
@@ -74,7 +78,7 @@ object Assign2 {
             res.iterator
             })
         if(datafile.endsWith("small.csv")){
-            dat2.coalesce(4)
+            dat2.coalesce(10)
         }
         //val fulldat = dat.union(missinginds)
         //var fullcmat = new CoordinateMatrix(fulldat.map(x => MatrixEntry(x._1,x._2,x._3)))
@@ -137,7 +141,7 @@ object Assign2 {
         
 
         var lsqerr = 0.0
-        var lsqerrbr = sc.broadcast(lsqerr)
+        //var lsqerrbr = sc.broadcast(lsqerr)
               
 
         while(iter < numIterations){
@@ -158,7 +162,7 @@ object Assign2 {
                 res.iterator
             }).cache()*/
 
-            var recmatrowslsqerr = newmat.rows.map(r => r.index -> r.vector).join(rmat.rows.map(x => x.index -> x.vector)).mapPartitions(iter => {
+            /*var recmatrowslsqerr = newmat.rows.map(r => r.index -> r.vector).join(rmat.rows.map(x => x.index -> x.vector)).mapPartitions(iter => {
                 var res2 = collection.mutable.ArrayBuffer.empty[(Double,Array[IndexedRow])]
                 var res = collection.mutable.ArrayBuffer.empty[IndexedRow]
                 iter.foreach(entry => {
@@ -170,6 +174,25 @@ object Assign2 {
                     })
                 res2 += ((lsqerr,res.toArray))
                 res2.iterator
+            })*/
+
+
+            //var recmatrowslsqerr2 = newmat.rows.map(r => r.index -> r.vector).join(rmat.rows.map(x => x.index -> x.vector)).join(irmatmissingindsdummy2AsCoords)
+            var recmatrowslsqerr = irmatmissingindsdummy2AsCoords.join(newmat.rows.map(r => r.index -> r.vector)).join(rmat.rows.map(x => x.index -> x.vector)).mapPartitions(iter => {
+                var res2 = collection.mutable.ArrayBuffer.empty[(Double,Array[IndexedRow])]
+                var res = collection.mutable.ArrayBuffer.empty[IndexedRow]
+                iter.foreach(entry => {
+                    var missv = breeze.linalg.DenseVector(entry._2._1._1.toArray) 
+                    var v1 = breeze.linalg.DenseVector(entry._2._1._2.toArray)
+                    var v2 = breeze.linalg.DenseVector(entry._2._2.toArray)                                    
+                    println(v2)
+                    var diff = v1:*(-I(v2)):+v2
+                    lsqerr += sum(diff:*diff)  
+                    v2(missv :> 0.0) := v1(missv :> 0.0).toDenseVector
+                    res += IndexedRow(entry._1, Vectors.dense(v2.toArray))                                      
+                    })
+                res2 += ((lsqerr,res.toArray))
+                res2.iterator
             })
 
             var recmatrows = recmatrowslsqerr.flatMap(r => r._2).cache()
@@ -178,6 +201,7 @@ object Assign2 {
                 iter=100
             }
             println("findmeee lsqerr"+lsqerr)
+            println("findmeee"+Calendar.getInstance.getTime())
 
             var recmat = new IndexedRowMatrix(recmatrows)
             svd = recmat.computeSVD(ksvd, computeU = true)
@@ -189,6 +213,7 @@ object Assign2 {
             iter+=1
             
         }
+        irmatmissingindsdummy2AsCoords.unpersist()
 
 
 
